@@ -1,0 +1,111 @@
+.sheet {
+  inline-size: 100%;
+  max-inline-size: var(--col);
+  max-block-size: 86dvh;
+  margin-block: auto 0;
+  margin-inline: auto;
+  padding: 0;
+  border: 0;
+  border-start-start-radius: 16px;
+  border-start-end-radius: 16px;
+  background: var(--sheet);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.sheet::backdrop {
+  background: rgb(10 20 15 / 0.62);
+}
+
+@media (min-width: 720px) {
+  .sheet {
+    margin: auto;
+    border-radius: 16px;
+  }
+}
+
+.panel {
+  display: grid;
+  gap: var(--s4);
+  padding-block: var(--s5) calc(var(--s5) + env(safe-area-inset-bottom));
+  padding-inline: var(--gutter);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.title {
+  padding-block-start: var(--s2);
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  flex: none;
+  min-block-size: var(--tap);
+  padding-inline: var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.body {
+  display: grid;
+  gap: var(--s4);
+  justify-items: start;
+}
+
+.foot {
+  display: grid;
+  gap: var(--s3);
+}
+
+.term {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+  cursor: help;
+}
+:lang(ur) .term,
+:lang(pa) .term {
+  text-underline-offset: 0.6em;
+}
+
+/* A row of terms under a text. Here each term is a full-size tap target. */
+.terms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s3);
+  max-inline-size: none;
+}
+
+.termsLabel {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.terms .term {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap);
+  padding-inline: var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: var(--sheet);
+  color: var(--green);
+}

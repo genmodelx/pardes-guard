@@ -1,0 +1,116 @@
+.search {
+  display: grid;
+  gap: var(--s3);
+  justify-items: start;
+}
+
+.search > :first-child {
+  justify-self: stretch;
+}
+
+.list {
+  display: grid;
+  gap: var(--s2);
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: var(--tap);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.rowText {
+  display: grid;
+  flex: 1;
+  gap: var(--s2);
+  justify-items: start;
+  min-inline-size: 0;
+}
+
+.name {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s4);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+/* Licence numbers are read out to officials: a face that tells 0 from O. */
+.licence {
+  font-family: var(--font-latin);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.chevron {
+  flex: none;
+  color: var(--ink-soft);
+}
+
+.agentHead {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+}
+
+.stars {
+  display: flex;
+  gap: var(--s1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.star {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--tap);
+  block-size: var(--tap);
+  border-radius: var(--radius-sm);
+  color: var(--amber-ink);
+  cursor: pointer;
+}
+
+.star input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.star:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.average {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-weight: var(--w-strong);
+}
+
+.average svg {
+  color: var(--amber-ink);
+}
+
+.actions {
+  display: grid;
+  gap: var(--s3);
+}

@@ -1,0 +1,94 @@
+.page {
+  min-block-size: 100dvh;
+}
+
+/* The brand on the paper, then the security-print band running off the edge. No text sits on the lines. */
+.band {
+  border-block-end: 1px solid var(--rule);
+}
+
+.bandInner {
+  display: flex;
+  align-items: stretch;
+  gap: var(--s4);
+  max-inline-size: var(--col);
+  margin-inline: auto;
+  padding-inline-start: var(--gutter);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s3);
+  flex: none;
+  padding-block: var(--s4);
+}
+
+.pattern {
+  flex: 1;
+  min-inline-size: 40px;
+  background-color: var(--pattern-ink);
+  -webkit-mask: url("/patterns/guilloche.svg") center / auto 100% repeat-x;
+  mask: url("/patterns/guilloche.svg") center / auto 100% repeat-x;
+}
+
+.names {
+  display: grid;
+}
+
+.name {
+  font-size: var(--t-h2);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Urdu here is drawn with the phone's own font: no web font is fetched before a language is chosen. */
+.nameUr,
+.titleUr,
+.promiseUr {
+  font-family: var(--stack-system);
+  line-height: 1.7;
+}
+
+.nameUr {
+  font-size: var(--t-body);
+  color: var(--ink-soft);
+  text-align: start;
+}
+
+.main {
+  display: grid;
+  gap: var(--s5);
+  max-inline-size: var(--col);
+  margin-inline: auto;
+  padding-block: var(--s5) var(--s7);
+  padding-inline: var(--gutter);
+}
+
+.title {
+  display: grid;
+  gap: var(--s1);
+}
+
+.titleUr {
+  font-size: var(--t-h1);
+  font-weight: 700;
+}
+
+.promise {
+  display: grid;
+  gap: var(--s1);
+  color: var(--ink-soft);
+}
+
+.links {
+  display: grid;
+  gap: var(--s3);
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap);
+  font-weight: 700;
+}

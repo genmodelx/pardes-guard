@@ -1,0 +1,40 @@
+/* The "next screen is loading" bar. Fixed to the top of the window, whichever link it belongs to. */
+.pending {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 50;
+  block-size: 4px;
+  background: var(--green);
+  transform-origin: 0 50%;
+  opacity: 0;
+  animation:
+    pendingShow 1ms linear 150ms forwards,
+    pendingGrow 8s cubic-bezier(0.1, 0.6, 0.2, 1) 150ms forwards;
+}
+
+[dir="rtl"] .pending {
+  transform-origin: 100% 50%;
+}
+
+@keyframes pendingShow {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Runs most of the way quickly, then creeps: it never claims to be done before the screen is. */
+@keyframes pendingGrow {
+  from {
+    transform: scaleX(0.05);
+  }
+  to {
+    transform: scaleX(0.92);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pending {
+    animation: pendingShow 1ms linear 150ms forwards;
+  }
+}

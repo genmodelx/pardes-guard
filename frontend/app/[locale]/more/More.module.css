@@ -1,0 +1,16 @@
+.note {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.account {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s2);
+}
+
+.problem {
+  margin: 0;
+  color: var(--red);
+  font-weight: var(--w-strong);
+}

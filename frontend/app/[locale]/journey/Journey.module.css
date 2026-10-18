@@ -1,0 +1,20 @@
+.route {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.pages {
+  display: grid;
+  gap: var(--s5);
+}
+
+.note {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.change {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+}

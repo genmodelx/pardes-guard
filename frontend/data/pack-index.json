@@ -1,0 +1,338 @@
+[
+ {
+  "code": "AU",
+  "name": "Australia",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "AUD",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "au-189",
+    "name": "Skilled Independent visa (subclass 189)",
+    "purpose": "skilled_migration",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   },
+   {
+    "id": "au-student",
+    "name": "Student visa (subclass 500)",
+    "purpose": "study",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "CA",
+  "name": "Canada",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "CAD",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "ca-express-entry-fsw",
+    "name": "Express Entry, Federal Skilled Worker",
+    "purpose": "skilled_migration",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   },
+   {
+    "id": "ca-study",
+    "name": "Study permit",
+    "purpose": "study",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "JP",
+  "name": "Japan",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "JPY",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "jp-ssw1",
+    "name": "Specified Skilled Worker (i)",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "PK",
+  "name": "Pakistan",
+  "kind": "origin",
+  "status": "draft",
+  "currency": "PKR",
+  "i18n": {
+   "ur": {
+    "name": "پاکستان",
+    "regulator": "بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ (وزارت سمندر پار پاکستانیز و ترقی انسانی وسائل)"
+   }
+  },
+  "documents": [
+   {
+    "id": "passport",
+    "title": "Passport",
+    "i18n": {
+     "ur": {
+      "title": "پاسپورٹ"
+     }
+    }
+   },
+   {
+    "id": "cnic",
+    "title": "CNIC (national identity card)",
+    "i18n": {
+     "ur": {
+      "title": "شناختی کارڈ (CNIC)"
+     }
+    }
+   },
+   {
+    "id": "frc",
+    "title": "FRC (Family Registration Certificate)",
+    "i18n": {
+     "ur": {
+      "title": "فیملی رجسٹریشن سرٹیفکیٹ (FRC)"
+     }
+    }
+   },
+   {
+    "id": "police-certificate",
+    "title": "Police character certificate",
+    "i18n": {
+     "ur": {
+      "title": "پولیس کریکٹر سرٹیفکیٹ"
+     }
+    }
+   },
+   {
+    "id": "degree-attestation-hec",
+    "title": "Degree attestation (HEC)",
+    "i18n": {
+     "ur": {
+      "title": "ڈگری کی تصدیق (HEC)"
+     }
+    }
+   },
+   {
+    "id": "mofa-attestation",
+    "title": "MOFA attestation",
+    "i18n": {
+     "ur": {
+      "title": "وزارت خارجہ کی تصدیق (MOFA)"
+     }
+    }
+   },
+   {
+    "id": "ibcc-equivalence",
+    "title": "IBCC equivalence",
+    "i18n": {
+     "ur": {
+      "title": "آئی بی سی سی کی مساوات (IBCC equivalence)"
+     }
+    }
+   },
+   {
+    "id": "gulf-medical",
+    "title": "Gulf medical test (Wafid / GAMCA)",
+    "i18n": {
+     "ur": {
+      "title": "خلیج کا میڈیکل ٹیسٹ (Wafid / GAMCA)"
+     }
+    }
+   },
+   {
+    "id": "protector-registration",
+    "title": "Protector registration",
+    "i18n": {
+     "ur": {
+      "title": "پروٹیکٹر رجسٹریشن"
+     }
+    }
+   }
+  ],
+  "routes": []
+ },
+ {
+  "code": "PH",
+  "name": "Philippines",
+  "kind": "origin",
+  "status": "draft",
+  "currency": "PHP",
+  "i18n": {},
+  "documents": [],
+  "routes": []
+ },
+ {
+  "code": "QA",
+  "name": "Qatar",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "QAR",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "qa-work",
+    "name": "Work residence permit",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "SA",
+  "name": "Saudi Arabia",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "SAR",
+  "i18n": {
+   "ur": {
+    "name": "سعودی عرب"
+   }
+  },
+  "documents": [],
+  "routes": [
+   {
+    "id": "sa-work",
+    "name": "Employment visa",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {
+     "ur": {
+      "name": "ورک ویزا (ملازمت کا ویزا)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "code": "KR",
+  "name": "South Korea",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "KRW",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "kr-eps",
+    "name": "Employment Permit System (E-9)",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "AE",
+  "name": "United Arab Emirates",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "AED",
+  "i18n": {},
+  "documents": [],
+  "routes": [
+   {
+    "id": "ae-work",
+    "name": "Employment visa and work permit",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   }
+  ]
+ },
+ {
+  "code": "GB",
+  "name": "United Kingdom",
+  "kind": "destination",
+  "status": "draft",
+  "currency": "GBP",
+  "i18n": {
+   "ur": {
+    "name": "برطانیہ"
+   }
+  },
+  "documents": [
+   {
+    "id": "cas",
+    "title": "CAS (Confirmation of Acceptance for Studies)",
+    "i18n": {
+     "ur": {
+      "title": "CAS (داخلے کی تصدیق کا حوالہ)"
+     }
+    }
+   },
+   {
+    "id": "english-test",
+    "title": "English test result",
+    "i18n": {
+     "ur": {
+      "title": "انگریزی کے ٹیسٹ کا نتیجہ"
+     }
+    }
+   },
+   {
+    "id": "proof-of-funds",
+    "title": "Proof of funds",
+    "i18n": {
+     "ur": {
+      "title": "پیسوں کا ثبوت"
+     }
+    }
+   },
+   {
+    "id": "tb-test",
+    "title": "Tuberculosis (TB) test result",
+    "i18n": {
+     "ur": {
+      "title": "ٹی بی ٹیسٹ کا نتیجہ"
+     }
+    }
+   }
+  ],
+  "routes": [
+   {
+    "id": "gb-skilled-worker",
+    "name": "Skilled Worker visa",
+    "purpose": "work",
+    "status": "draft",
+    "interview_topics": 0,
+    "i18n": {}
+   },
+   {
+    "id": "gb-student",
+    "name": "Student visa",
+    "purpose": "study",
+    "status": "draft",
+    "interview_topics": 4,
+    "i18n": {
+     "ur": {
+      "name": "اسٹوڈنٹ ویزا"
+     }
+    }
+   }
+  ]
+ }
+]

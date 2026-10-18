@@ -1,0 +1,165 @@
+rules_version = '2';
+
+// Pardes Guard, free-tier build: the browser talks to Firestore directly, so these rules are the
+// only thing between one person's data and everyone else. The client is never trusted.
+// (infra/firestore.rules is the deny-all file for the Cloud Run build, where only the API reads.)
+//
+// Who is who:
+//   owner  the signed-in user whose uid is in the document's owner_id
+//   staff  a user with roles/{uid}.role of 'ngo' or 'admin'. That document can only be created
+//          in the Firebase console; no client can write it.
+//   admin  staff with role 'admin': the only one who may replace the licensed recruiter list.
+//
+// Tests: frontend/tests-rules/firestore.rules.test.ts (npm run test:rules, needs Java).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isStaff() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/roles/$(request.auth.uid))
+        && get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role in ['ngo', 'admin'];
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/roles/$(request.auth.uid))
+        && get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // The stored document belongs to the caller.
+    function ownsStored() {
+      return signedIn() && resource.data.owner_id == request.auth.uid;
+    }
+
+    // The document being written names the caller as its owner.
+    function ownsIncoming() {
+      return signedIn() && request.resource.data.owner_id == request.auth.uid;
+    }
+
+    // ---- Private to the owner; staff may read ----
+
+    match /checks/{checkId} {
+      // A missing document may be "read" so the app can tell "not found" from "not yours".
+      allow get: if signedIn() && (resource == null || ownsStored() || isStaff());
+      allow list: if ownsStored() || isStaff();
+      allow create: if ownsIncoming();
+      allow update: if ownsStored() && ownsIncoming();
+      allow delete: if ownsStored();
+    }
+
+    match /cases/{caseId} {
+      allow get: if signedIn() && (resource == null || ownsStored() || isStaff());
+      allow list: if ownsStored() || isStaff();
+      allow create: if ownsIncoming();
+      allow update: if ownsStored() && ownsIncoming();
+      allow delete: if ownsStored();
+    }
+
+    // Evidence records form a hash chain. They can be added and (with the rest of a person's data)
+    // deleted, but never edited, and each one carries the server's own time.
+    match /evidence/{evidenceId} {
+      allow get: if signedIn() && (resource == null || ownsStored() || isStaff());
+      allow list: if ownsStored() || isStaff();
+      allow create: if ownsIncoming() && request.resource.data.server_time == request.time;
+      allow update: if false;
+      allow delete: if ownsStored();
+    }
+
+    // journeys/{uid}: one record per person (journey, settings, ids of their signals and reports).
+    match /journeys/{userId} {
+      allow get: if signedIn() && (request.auth.uid == userId || isStaff());
+      allow list: if isStaff();
+      allow create, update: if signedIn() && request.auth.uid == userId && request.resource.data.owner_id == userId;
+      allow delete: if signedIn() && request.auth.uid == userId;
+    }
+
+    // ---- Shared between signed-in users ----
+
+    // ratings/{license}_{uid}: one rating per person per recruiter.
+    match /ratings/{ratingId} {
+      allow read: if signedIn();
+      allow create, update: if signedIn()
+        && request.resource.data.uid == request.auth.uid
+        && ratingId == request.resource.data.license_no + '_' + request.auth.uid
+        && request.resource.data.stars is int
+        && request.resource.data.stars >= 1
+        && request.resource.data.stars <= 5;
+      allow delete: if signedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    // ---- Write-only for their author; staff read ----
+
+    // Hashed fraud signals from people who opted in. The author cannot read them back, only delete
+    // them (they keep the ids in their own journeys/{uid} record).
+    match /signals/{signalId} {
+      allow read: if isStaff();
+      allow create: if ownsIncoming();
+      allow update: if false;
+      allow delete: if ownsStored() || isStaff();
+    }
+
+    // Community scam reports. Never public: staff review them first.
+    match /reports/{reportId} {
+      allow read: if isStaff();
+      allow create: if ownsIncoming() && request.resource.data.status == 'pending';
+      allow update: if isStaff();
+      allow delete: if ownsStored() || isStaff();
+    }
+
+    // ---- Family view ----
+
+    // shares/{code}: whoever holds the code can open that one document. Codes cannot be listed, and
+    // only the owner of the case behind it can create or change it.
+    match /shares/{code} {
+      allow get: if true;
+      allow list: if false;
+      allow create: if ownsIncoming()
+        && code.size() >= 12
+        && get(/databases/$(database)/documents/cases/$(request.resource.data.case_id)).data.owner_id == request.auth.uid;
+      allow update: if ownsStored() && ownsIncoming()
+        && request.resource.data.case_id == resource.data.case_id;
+      allow delete: if ownsStored();
+    }
+
+    // ---- Public to read, staff to write ----
+
+    match /riskIndex/{key} {
+      allow read: if true;
+      allow write: if isStaff();
+    }
+
+    match /packOverrides/{country} {
+      allow read: if true;
+      allow write: if isStaff();
+    }
+
+    // config/recruiters and its parts (recruiters_0, recruiters_1, ...) hold the imported licensed
+    // list, which every agent check uses: only an admin changes it. Other settings: staff.
+    match /config/{name} {
+      allow read: if true;
+      allow write: if (name.matches('recruiters(_[0-9]+)?') && isAdmin())
+        || (!name.matches('recruiters(_[0-9]+)?') && isStaff());
+    }
+
+    // ---- Staff only ----
+
+    match /contentDrafts/{draftId} {
+      allow read, write: if isStaff();
+    }
+
+    // ---- Roles: readable by their own user, written only from the Firebase console ----
+
+    match /roles/{userId} {
+      allow get: if signedIn() && request.auth.uid == userId;
+      allow list: if false;
+      allow write: if false;
+    }
+
+    // Anything not named above is denied.
+  }
+}

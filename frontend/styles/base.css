@@ -1,0 +1,222 @@
+/* Base styles: reset, type, focus and the few global helpers. Everything else is a CSS module
+   next to its component. Logical properties only (inline-start/end), so right-to-left needs no overrides. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--paper);
+  /* The bottom bar and a screen's sticky button stay over the page. When a link or field gets focus
+     (or is scrolled to), the browser keeps it clear of them instead of hiding it underneath. */
+  scroll-padding-block-end: calc(var(--bar-h) + 112px + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 900px) {
+  html {
+    scroll-padding-block-end: 112px;
+  }
+}
+
+body {
+  margin: 0;
+  min-block-size: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+
+/* A nested language block (an Urdu answer on an English page) takes its own type settings. */
+[lang] {
+  font-family: var(--font-body);
+  line-height: var(--lh-body);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--w-strong);
+}
+
+h3 {
+  font-size: var(--fs-body);
+  font-weight: var(--w-strong);
+}
+
+p {
+  max-inline-size: 65ch;
+  /* Avoids a last line with one lonely word, which is common in Urdu sentences ending in a short verb. */
+  text-wrap: pretty;
+}
+
+li,
+label,
+summary {
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--green);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+}
+
+/* Nastaliq and Naskh hang below the baseline; a default underline cuts through the letters. */
+[lang|="ur"] a,
+[lang|="pa"] a,
+[lang|="ps"] a,
+[lang|="ar"] a,
+[lang|="sd"] a {
+  text-underline-offset: 0.55em;
+}
+
+strong,
+b {
+  font-weight: var(--w-strong);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  max-inline-size: 100%;
+}
+
+svg {
+  flex: none;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background: var(--green);
+  color: var(--green-ink);
+}
+
+/* Icons that show direction turn around in right-to-left layouts. */
+[dir="rtl"] .pg-icon-dir {
+  transform: scaleX(-1);
+}
+[dir="rtl"] [dir="ltr"] .pg-icon-dir {
+  transform: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Numbers, codes, phone numbers and links keep their left-to-right order inside Urdu text. */
+bdi,
+.ltr {
+  unicode-bidi: isolate;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: slashed-zero;
+  letter-spacing: 0.04em;
+}
+
+.soft {
+  color: var(--ink-soft);
+}
+
+.small {
+  font-size: var(--fs-small);
+}
+
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--s2);
+  inset-inline-start: var(--s2);
+  z-index: 100;
+  padding: var(--s3) var(--s4);
+  background: var(--green);
+  color: var(--green-ink);
+  border-radius: var(--radius);
+  font-weight: var(--w-strong);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+  outline-color: var(--focus);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

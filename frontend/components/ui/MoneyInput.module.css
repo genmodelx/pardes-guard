@@ -1,0 +1,13 @@
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 7.5rem;
+  gap: var(--s2);
+}
+
+.amount {
+  inline-size: 100%;
+}
+
+.currency {
+  font-family: var(--font-latin);
+}

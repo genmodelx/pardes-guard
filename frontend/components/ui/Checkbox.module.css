@@ -1,0 +1,63 @@
+.row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  min-block-size: var(--tap);
+  padding-block: var(--s3);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.row[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 28px;
+  block-size: 28px;
+  margin-block-start: 0.05em;
+  border: 2px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: var(--sheet);
+  color: transparent;
+}
+
+.input:checked + .box {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--green-ink);
+}
+
+.input:focus-visible + .box {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.text {
+  display: grid;
+  gap: 2px;
+}
+
+.label {
+  line-height: var(--lh-title);
+}
+
+.hint {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}

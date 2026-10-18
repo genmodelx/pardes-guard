@@ -1,0 +1,79 @@
+.list {
+  display: grid;
+}
+
+.menu {
+  display: grid;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  padding-inline: var(--s4);
+}
+
+.item + .item {
+  border-block-start: 1px solid var(--rule);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: 64px;
+  padding-block: var(--s3);
+  color: var(--ink);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.row:hover .title {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+}
+
+.text {
+  display: grid;
+  gap: var(--s1);
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.title {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  text-wrap: balance;
+}
+
+.row[data-status="done"] .title,
+.row[data-status="skipped"] .title {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.description {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.chevron {
+  flex: none;
+  color: var(--ink-soft);
+}
+
+.menuIcon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 44px;
+  block-size: 44px;
+  border-radius: var(--radius);
+  background: var(--green-tint);
+  color: var(--green);
+}

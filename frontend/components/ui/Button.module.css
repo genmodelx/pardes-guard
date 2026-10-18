@@ -1,0 +1,91 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s3);
+  min-block-size: var(--control);
+  padding-block: var(--s2);
+  padding-inline: var(--s5);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--green);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: filter 120ms linear;
+}
+
+.full {
+  display: flex;
+  inline-size: 100%;
+}
+
+.compact {
+  min-block-size: var(--tap);
+  padding-inline: var(--s4);
+}
+
+.primary {
+  background: var(--green);
+  color: var(--green-ink);
+}
+
+.secondary {
+  background: var(--sheet);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.quiet {
+  padding-inline: var(--s2);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+}
+:lang(ur) .quiet,
+:lang(pa) .quiet,
+:lang(ps) .quiet,
+:lang(ar) .quiet,
+:lang(sd) .quiet {
+  text-underline-offset: 0.6em;
+}
+
+.danger {
+  background: var(--red);
+  color: var(--red-ink);
+}
+
+.button:hover {
+  filter: brightness(0.93);
+}
+.button:active {
+  filter: brightness(0.86);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.label {
+  min-inline-size: 0;
+}
+
+/* Nastaliq hangs from a high baseline, so short words sit too high. Nudge the label down a little. */
+:lang(ur) .label,
+:lang(pa) .label {
+  padding-block-start: 0.3em;
+}

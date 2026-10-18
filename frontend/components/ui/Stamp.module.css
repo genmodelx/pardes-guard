@@ -1,0 +1,239 @@
+/* The ink stamp. Sizes inside follow the stamp's own width (container query units), with px
+   fallbacks first for browsers that do not know them. */
+
+.stamp {
+  --stamp-w: 184px;
+  --stamp-ink: var(--green);
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--stamp-w);
+  aspect-ratio: 220 / 132;
+  flex: none;
+  color: var(--stamp-ink);
+  container-type: inline-size;
+  transform: rotate(var(--tilt, 0deg));
+  mix-blend-mode: var(--stamp-blend);
+  opacity: 0.94;
+  /* Stamps keep one orientation in every language, like a real one would. */
+  direction: ltr;
+  user-select: none;
+}
+
+.sm {
+  --stamp-w: 132px;
+}
+.lg {
+  --stamp-w: 232px;
+}
+
+.red {
+  --stamp-ink: var(--red);
+}
+.amber {
+  --stamp-ink: var(--amber);
+}
+.green {
+  --stamp-ink: var(--ok);
+}
+.done {
+  --stamp-ink: var(--green);
+  --stamp-w: 104px;
+  aspect-ratio: 1;
+}
+.done.sm {
+  --stamp-w: 88px;
+}
+.done.lg {
+  --stamp-w: 128px;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  inline-size: 80%;
+  text-align: center;
+}
+
+/* The symbol sits above the word, large enough to carry the meaning on its own. */
+.icon {
+  inline-size: 30px;
+  block-size: 30px;
+  inline-size: 16.5cqi;
+  block-size: 16.5cqi;
+  margin-block-end: 1cqi;
+}
+
+.word {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 27px;
+  font-size: 14.5cqi;
+  line-height: 1.05;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.fitMedium .word {
+  font-size: 23px;
+  font-size: 12.5cqi;
+  letter-spacing: 0.05em;
+}
+
+.fitLong .word {
+  font-size: 17px;
+  font-size: 9.5cqi;
+  letter-spacing: 0.02em;
+}
+
+.line {
+  margin-block-start: 1.6cqi;
+  font-size: 12px;
+  font-size: 6.4cqi;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  max-inline-size: 100%;
+}
+
+/* Arabic-script languages: no capitals, taller letters, and small Nastaliq is hard to read through
+   ink texture. So the stamp carries the symbol and the word only; the meaning line is the page
+   heading right beside it. */
+:lang(ur) .word,
+:lang(pa) .word,
+:lang(ps) .word,
+:lang(ar) .word,
+:lang(sd) .word {
+  font-weight: 700;
+  font-size: 28px;
+  font-size: 15cqi;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+:lang(ur) .fitLong .word,
+:lang(pa) .fitLong .word,
+:lang(ps) .fitLong .word,
+:lang(ar) .fitLong .word,
+:lang(sd) .fitLong .word {
+  font-size: 22px;
+  font-size: 12cqi;
+}
+:lang(ur) .icon,
+:lang(pa) .icon,
+:lang(ps) .icon,
+:lang(ar) .icon,
+:lang(sd) .icon {
+  inline-size: 14cqi;
+  block-size: 14cqi;
+  margin-block-end: 3cqi;
+}
+:lang(ur) .line,
+:lang(pa) .line,
+:lang(ps) .line,
+:lang(ar) .line,
+:lang(sd) .line {
+  display: none;
+}
+:lang(hi) .word,
+:lang(ne) .word,
+:lang(bn) .word,
+:lang(si) .word,
+:lang(ta) .word {
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+:lang(hi) .line,
+:lang(ne) .line,
+:lang(bn) .line,
+:lang(si) .line,
+:lang(ta) .line {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+/* Round date stamp for a finished journey stage. */
+.done .body {
+  inline-size: 74%;
+  block-size: 100%;
+  gap: 0;
+  display: grid;
+  grid-template-rows: 39% 22% 39%;
+  align-items: center;
+  justify-items: center;
+}
+.done .word {
+  align-self: end;
+  font-size: 15px;
+  font-size: 14.5cqi;
+  letter-spacing: 0.08em;
+  padding-block-end: 3cqi;
+}
+:lang(ur) .done .word,
+:lang(pa) .done .word,
+:lang(ps) .done .word,
+:lang(ar) .done .word,
+:lang(sd) .done .word {
+  font-size: 15px;
+  font-size: 14cqi;
+  line-height: 1.5;
+  letter-spacing: 0;
+  padding-block-end: 0;
+}
+.date {
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-size: 11.5cqi;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.tick {
+  align-self: start;
+  inline-size: 20px;
+  block-size: 20px;
+  inline-size: 19cqi;
+  block-size: 19cqi;
+  margin-block-start: 3cqi;
+}
+
+/* The press: the stamp comes down, hits, and settles. 300ms, once. */
+.press {
+  animation: stamp-press 300ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+@keyframes stamp-press {
+  0% {
+    opacity: 0;
+    transform: rotate(calc(var(--tilt, 0deg) - 7deg)) scale(1.7);
+  }
+  45% {
+    opacity: 0.94;
+  }
+  70% {
+    transform: rotate(var(--tilt, 0deg)) scale(0.95);
+  }
+  100% {
+    opacity: 0.94;
+    transform: rotate(var(--tilt, 0deg)) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press {
+    animation: none;
+  }
+}

@@ -1,0 +1,303 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+}
+
+/* ---- Top bar ---- */
+
+.top {
+  background: var(--paper);
+}
+
+.topInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  max-inline-size: var(--col);
+  margin-inline: auto;
+  padding-block: var(--s2);
+  padding-inline: var(--gutter);
+  min-block-size: 68px;
+}
+
+/* Security-print strip, Home only: a band of fine lines under the bar, edge to edge. No text sits on it. */
+.strip {
+  block-size: 18px;
+  border-block: 1px solid var(--rule);
+  background-color: var(--pattern-ink);
+  -webkit-mask: url("/patterns/guilloche.svg") center / auto 36px repeat-x;
+  mask: url("/patterns/guilloche.svg") center / auto 36px repeat-x;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.mark {
+  flex: none;
+}
+
+.brandName {
+  font-size: var(--fs-body);
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  min-block-size: var(--tap);
+  padding-inline: 0 var(--s2);
+  border: 0;
+  background: none;
+  color: var(--green);
+  font: inherit;
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sos {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  flex: none;
+  min-block-size: var(--tap);
+  padding-inline: var(--s3) var(--s4);
+  border: 2px solid var(--red);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--red);
+  font-weight: 800;
+  line-height: var(--lh-title);
+  text-decoration: none;
+}
+
+/* ---- Page column ---- */
+
+.main {
+  display: grid;
+  align-content: start;
+  gap: var(--s5);
+  flex: 1;
+  inline-size: 100%;
+  max-inline-size: var(--col);
+  margin-inline: auto;
+  padding-block: var(--s3) var(--s7);
+  padding-inline: var(--gutter);
+  /* The stamp lands from 1.7 times its size. Without this, that first frame is wider than a phone,
+     and the phone zooms the whole page out to fit it (and stays zoomed out). Clip keeps the column's
+     sticky bar working, unlike hidden. */
+  overflow-x: clip;
+}
+
+/* No block may push the column wider than the screen (a field's natural width grows with the text
+   size); long content wraps inside its own block instead. */
+.main > * {
+  min-inline-size: 0;
+}
+
+.main:focus {
+  outline: none;
+}
+
+/* A language drafted by machine: one quiet line, never louder than the screen's own content. */
+.machine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s2);
+  align-items: center;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.machineIcon {
+  flex: none;
+}
+
+.offline {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  margin: 0;
+  padding: var(--s2) var(--s3);
+  border-radius: var(--radius-sm);
+  background: var(--amber-tint);
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: var(--w-strong);
+}
+
+.machine a {
+  color: var(--green);
+  font-weight: var(--w-strong);
+}
+
+.wide {
+  max-inline-size: var(--col-wide);
+}
+
+.withTabs .main {
+  padding-block-end: calc(var(--bar-h) + env(safe-area-inset-bottom) + var(--s7));
+}
+
+.head {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+}
+
+.lead {
+  color: var(--ink-soft);
+}
+
+.section {
+  display: grid;
+  gap: var(--s3);
+}
+
+.actions {
+  position: sticky;
+  inset-block-end: 0;
+  z-index: 5;
+  display: grid;
+  gap: var(--s2);
+  margin-inline: calc(-1 * var(--gutter));
+  padding-block: var(--s3) calc(var(--s3) + env(safe-area-inset-bottom));
+  padding-inline: var(--gutter);
+  border-block-start: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.withTabs .actions {
+  inset-block-end: calc(var(--bar-h) + env(safe-area-inset-bottom));
+  padding-block-end: var(--s3);
+}
+
+/* ---- Bottom bar ---- */
+
+.tabs {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 10;
+  border-block-start: 1px solid var(--rule);
+  background: var(--sheet);
+  padding-block-end: env(safe-area-inset-bottom);
+}
+
+.tabList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-inline-size: var(--col);
+  margin-inline: auto;
+}
+
+.tabItem {
+  display: flex;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-block-size: var(--bar-h);
+  padding-inline: var(--s1);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:lang(ur) .tab,
+:lang(pa) .tab {
+  line-height: 1.7;
+  gap: 0;
+}
+
+.tabOn {
+  color: var(--green);
+  font-weight: 800;
+}
+
+/* The bar above the active item: a second sign besides colour and the filled icon. */
+.tabOn::before {
+  content: "";
+  position: absolute;
+  inset-block-start: -1px;
+  inset-inline: 22%;
+  block-size: 4px;
+  border-end-start-radius: 4px;
+  border-end-end-radius: 4px;
+  background: var(--green);
+}
+
+.tab:focus-visible {
+  outline-offset: -4px;
+}
+
+/* On wide screens the bar becomes a rail down the starting side. */
+@media (min-width: 900px) {
+  .withTabs {
+    padding-inline-start: 104px;
+  }
+
+  .tabs {
+    inset-block: 0;
+    inset-inline: 0 auto;
+    inline-size: 104px;
+    border-block-start: 0;
+    border-inline-end: 1px solid var(--rule);
+    padding-block: var(--s5);
+  }
+
+  .tabList {
+    grid-template-columns: 1fr;
+    gap: var(--s2);
+  }
+
+  .tab {
+    min-block-size: 76px;
+  }
+
+  .tabOn::before {
+    inset-block: 20%;
+    inset-inline: -1px auto;
+    inline-size: 4px;
+    block-size: auto;
+    border-radius: 0;
+    border-start-end-radius: 4px;
+    border-end-end-radius: 4px;
+  }
+
+  .withTabs .main {
+    padding-block-end: var(--s7);
+  }
+
+  .withTabs .actions {
+    inset-block-end: 0;
+    padding-block-end: var(--s3);
+  }
+}

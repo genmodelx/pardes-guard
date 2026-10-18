@@ -1,0 +1,17 @@
+.actions {
+  display: grid;
+  gap: var(--s3);
+}
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.lineIcon {
+  margin-block-start: 0.1em;
+  color: var(--green);
+}

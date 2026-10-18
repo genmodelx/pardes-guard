@@ -1,0 +1,159 @@
+.papers {
+  display: grid;
+  gap: var(--s3);
+  padding: 0;
+  list-style: none;
+}
+
+.paper {
+  display: grid;
+  gap: var(--s3);
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.paperHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.paperN {
+  min-inline-size: 0;
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+.remove {
+  flex: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  min-block-size: var(--tap);
+  padding-inline: var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.problem {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.reading {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  min-block-size: var(--tap);
+  font-weight: var(--w-strong);
+}
+
+/* The paper being read breathes gently, so the screen does not look stuck. */
+.wait {
+  flex: none;
+  color: var(--green);
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wait {
+    animation: none;
+  }
+}
+
+.notice {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.names {
+  display: grid;
+  gap: var(--s3);
+}
+
+.names h3,
+.names p {
+  margin: 0;
+}
+
+/* Names are shown as printed, left to right, in a face that tells I from l. */
+.name {
+  font-family: var(--font-latin);
+  font-weight: var(--w-strong);
+}
+
+.nameList {
+  display: grid;
+  gap: var(--s2);
+  padding: 0;
+  list-style: none;
+}
+
+.nameList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  padding: var(--s3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.nameIcon {
+  flex: none;
+}
+
+.match-same .nameIcon {
+  color: var(--ok);
+}
+.match-order .nameIcon {
+  color: var(--amber-ink);
+}
+.nameList .match-different {
+  border-color: var(--red);
+}
+.match-different .nameIcon {
+  color: var(--red);
+}
+
+.nameText {
+  display: grid;
+  gap: var(--s1);
+  min-inline-size: 0;
+  line-height: var(--lh-title);
+}
+
+.matchWords {
+  color: var(--ink-soft);
+}
+.match-different .matchWords {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.advice {
+  font-weight: var(--w-strong);
+}
+
+.paper > p {
+  margin: 0;
+}
+
+.summaryName {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-title);
+  overflow-wrap: anywhere;
+}

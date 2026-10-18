@@ -1,0 +1,97 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-block-size: 32px;
+  padding-block: 2px;
+  padding-inline: var(--s2) var(--s3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  line-height: var(--lh-title);
+  vertical-align: middle;
+}
+
+/* Nastaliq's tall strokes (the kaf in "company") rise above the line; give them room inside the chip. */
+:lang(ur) .chip,
+:lang(pa) .chip {
+  padding-block: 7px 1px;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  color: var(--ink-soft);
+}
+
+.green {
+  background: var(--green-tint);
+  border-color: transparent;
+}
+.green .icon {
+  color: var(--green);
+}
+
+.ok {
+  background: var(--ok-tint);
+  border-color: transparent;
+}
+.ok .icon {
+  color: var(--ok);
+}
+
+.amber {
+  background: var(--amber-tint);
+  border-color: transparent;
+}
+.amber .icon {
+  color: var(--amber-ink);
+}
+
+.red {
+  background: var(--red-tint);
+  border-color: transparent;
+}
+.red .icon {
+  color: var(--red);
+}
+
+.badge {
+  border-width: 1.5px;
+}
+.badge.ok {
+  border-color: var(--ok);
+}
+
+.dashed {
+  border-style: dashed;
+  border-color: var(--rule-strong);
+}
+.dashed.amber {
+  border-color: var(--amber-ink);
+}
+
+/* Status shapes used on their own in rows. */
+.statusIcon {
+  flex: none;
+}
+.s-todo,
+.s-skipped {
+  color: var(--rule-strong);
+}
+.s-doing {
+  color: var(--amber-ink);
+}
+.s-done {
+  color: var(--ok);
+}
+.s-problem {
+  color: var(--red);
+}
+
+.s-muted {
+  color: var(--rule-strong);
+}

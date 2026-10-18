@@ -1,0 +1,34 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  min-block-size: var(--tap);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.text {
+  display: grid;
+  gap: var(--s2);
+}
+
+.summary {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  color: var(--green);
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}

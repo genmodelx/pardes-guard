@@ -1,0 +1,106 @@
+{
+ "source": "sample",
+ "loaded_on": "2026-10-13",
+ "rows": [
+  {
+   "license_no": "FIC1001LHR",
+   "name": "Sunrise Manpower Promoters (Fictional)",
+   "city": "Lahore",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1002LHR",
+   "name": "Crescent Overseas Employment (Fictional)",
+   "city": "Lahore",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1003RWP",
+   "name": "Blue Horizon Recruiters (Fictional)",
+   "city": "Rawalpindi",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1004KHI",
+   "name": "Harbour Gate Placements (Fictional)",
+   "city": "Karachi",
+   "status": "suspended",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1005GRW",
+   "name": "Green Valley Overseas (Fictional)",
+   "city": "Gujranwala",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1006FSD",
+   "name": "Northstar Employment Promoters (Fictional)",
+   "city": "Faisalabad",
+   "status": "cancelled",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1007PEW",
+   "name": "Khyber Skills Placement (Fictional)",
+   "city": "Peshawar",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1008MUL",
+   "name": "Desert Route Manpower (Fictional)",
+   "city": "Multan",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1009SKT",
+   "name": "Silver Crest Recruitment (Fictional)",
+   "city": "Sialkot",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  },
+  {
+   "license_no": "FIC1010ISB",
+   "name": "Capital Bridge Overseas (Fictional)",
+   "city": "Islamabad",
+   "status": "active",
+   "source": "sample",
+   "list_date": "2026-10-01",
+   "rating_avg": null,
+   "rating_count": 0
+  }
+ ]
+}

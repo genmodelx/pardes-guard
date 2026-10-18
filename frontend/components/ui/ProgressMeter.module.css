@@ -1,0 +1,76 @@
+.meter {
+  display: grid;
+  gap: var(--s2);
+}
+
+.bar {
+  block-size: 14px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 7px;
+  background: var(--sheet);
+  overflow: hidden;
+}
+
+.fill {
+  block-size: 100%;
+  background: var(--green);
+}
+
+.summary {
+  font-weight: var(--w-strong);
+}
+
+.why {
+  justify-self: start;
+  max-inline-size: 100%;
+}
+
+.whyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-block-size: var(--tap);
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+}
+.whyButton::-webkit-details-marker {
+  display: none;
+}
+:lang(ur) .whyButton,
+:lang(pa) .whyButton {
+  text-underline-offset: 0.6em;
+}
+
+.why[open] .caret {
+  transform: rotate(180deg);
+}
+
+.reasons {
+  display: grid;
+  gap: var(--s2);
+  padding-block: var(--s2) var(--s3);
+  padding-inline-start: var(--s5);
+  list-style: disc;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+}
+
+/* The line that joins one stage to the next. */
+.dot + .dot::before {
+  content: "";
+  inline-size: 18px;
+  border-block-start: 2px solid var(--rule-strong);
+}

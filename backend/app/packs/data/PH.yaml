@@ -1,0 +1,39 @@
+# Philippines origin pack. STATUS: draft, verify before launch.
+code: PH
+name: Philippines
+kind: origin
+languages: [fil, en]
+currency: PHP
+status: draft
+last_verified: null
+regulator: Department of Migrant Workers (DMW)
+official_sources:
+  - title: Department of Migrant Workers
+    url: https://dmw.gov.ph
+  - title: Overseas Workers Welfare Administration
+    url: https://owwa.gov.ph
+official_domains: [dmw.gov.ph, owwa.gov.ph]
+max_recruitment_fee: null
+max_recruitment_fee_source: null
+departure_checklist:
+  - id: licensed-agency
+    title: Use a DMW-licensed recruitment agency
+    description: Check the agency's licence with the Department of Migrant Workers before paying anything.
+    official_url: https://dmw.gov.ph
+  - id: written-contract
+    title: Get a written contract you understand
+    description: Compare the contract with what the agency promised before you sign.
+  - id: oec
+    title: Overseas Employment Certificate
+    description: Departing workers need their exit clearance processed through the DMW.
+    official_url: https://dmw.gov.ph
+  - id: pdos
+    title: Pre-Departure Orientation Seminar
+    description: Attend the orientation; it covers your rights and contacts abroad.
+    official_url: https://owwa.gov.ph
+complaint_channels:
+  - name: Department of Migrant Workers
+    url: https://dmw.gov.ph
+  - name: Overseas Workers Welfare Administration
+    url: https://owwa.gov.ph
+ladder_days: [0, 7, 14]

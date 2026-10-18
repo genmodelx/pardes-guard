@@ -1,0 +1,63 @@
+.ladder {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A thin line joins the steps, like a route on a ticket. */
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  padding-block: var(--s2) var(--s4);
+}
+
+.step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--s2) + 28px) 0;
+  inset-inline-start: 12px;
+  border-inline-start: 2px solid var(--rule);
+}
+
+.stepIcon {
+  position: relative;
+  flex: none;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-radius: 50%;
+}
+
+.stepText {
+  display: grid;
+  gap: 2px;
+  line-height: var(--lh-title);
+}
+
+.stepName {
+  font-weight: var(--w-strong);
+}
+
+.stepStatus {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.s-awaiting_approval .stepIcon {
+  color: var(--amber-ink);
+}
+.s-awaiting_approval .stepStatus {
+  color: var(--amber-ink);
+  font-weight: var(--w-strong);
+}
+.s-approved .stepIcon,
+.s-sent .stepIcon {
+  color: var(--ok);
+}
+.s-declined .stepName,
+.s-skipped .stepName {
+  color: var(--ink-soft);
+  font-weight: 400;
+}

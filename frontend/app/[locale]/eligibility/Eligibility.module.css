@@ -1,0 +1,91 @@
+.test {
+  display: grid;
+  gap: var(--s3);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.test > :not(button) {
+  justify-self: stretch;
+}
+
+.routes {
+  display: grid;
+  gap: var(--s3);
+  padding: 0;
+  list-style: none;
+}
+
+.route {
+  display: grid;
+  gap: var(--s3);
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.routeHead {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+}
+
+.routeName {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-title);
+}
+
+.country {
+  color: var(--ink-soft);
+  font-size: var(--fs-body);
+  font-weight: 400;
+}
+
+.counts {
+  margin: 0;
+  font-weight: var(--w-strong);
+}
+
+.details {
+  display: grid;
+  gap: var(--s3);
+}
+
+.summary {
+  min-block-size: var(--tap);
+  display: flex;
+  align-items: center;
+  color: var(--green);
+  font-weight: var(--w-strong);
+  cursor: pointer;
+}
+
+.items {
+  display: grid;
+  gap: var(--s3);
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding-block-start: var(--s3);
+  border-block-start: 1px solid var(--rule);
+}
+
+.item p {
+  margin: 0;
+}
+
+.itemTitle {
+  font-weight: var(--w-strong);
+}

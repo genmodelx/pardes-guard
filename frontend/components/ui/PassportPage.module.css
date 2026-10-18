@@ -1,0 +1,82 @@
+/* A page in the booklet. The two thin edges underneath are the pages below it: hard lines, no blur. */
+.page {
+  position: relative;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  box-shadow:
+    0 4px 0 -2px var(--sheet),
+    0 5px 0 -2px var(--rule),
+    0 9px 0 -5px var(--sheet),
+    0 10px 0 -5px var(--rule);
+  margin-block-end: 10px;
+}
+
+/* Security-print strip. It sits on the top edge only; no text is ever placed on it. */
+.strip {
+  block-size: 18px;
+  border-start-start-radius: calc(var(--radius) - 1px);
+  border-start-end-radius: calc(var(--radius) - 1px);
+  border-block-end: 1px solid var(--rule);
+  background-color: var(--pattern-ink);
+  -webkit-mask: url("/patterns/guilloche.svg") center / auto 34px repeat-x;
+  mask: url("/patterns/guilloche.svg") center / auto 34px repeat-x;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding-block: var(--s4) var(--s2);
+  padding-inline: var(--s4);
+}
+
+.heading {
+  display: grid;
+  gap: 2px;
+  min-inline-size: 0;
+}
+
+.count {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+/* The stamp may hang over the top edge of the page: it is the one thing allowed to break the grid. */
+.slot {
+  flex: none;
+  margin-block-start: -18px;
+  margin-inline-end: -6px;
+}
+
+.empty {
+  display: block;
+  inline-size: 56px;
+  block-size: 56px;
+  margin-block-start: 18px;
+  border: 2px dashed var(--rule);
+  border-radius: 50%;
+}
+
+.note {
+  padding-block-end: var(--s1);
+  padding-inline: var(--s4);
+}
+
+.body {
+  padding-inline: var(--s4);
+}
+
+.number {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: var(--s1) var(--s3);
+  padding-inline: var(--s4);
+  color: var(--ink-soft);
+  font-family: var(--font-latin);
+  font-size: var(--t-small);
+  font-weight: 700;
+  line-height: 1.2;
+  max-inline-size: none;
+}

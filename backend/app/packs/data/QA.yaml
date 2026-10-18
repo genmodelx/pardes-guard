@@ -1,0 +1,77 @@
+# Qatar destination pack. STATUS: draft, verify before launch.
+code: QA
+name: Qatar
+kind: destination
+languages: [ar, en]
+currency: QAR
+status: draft
+last_verified: null
+official_sources:
+  - title: Ministry of Labour
+    url: https://www.mol.gov.qa
+  - title: Qatar Visa Center (biometrics, medical and contract signing in some sending countries)
+    url: https://www.qatarvisacenter.com
+official_domains: [mol.gov.qa, qatarvisacenter.com, portal.moi.gov.qa]
+red_flag_visa_types: [visit, tourist, transit, hayya]
+labour_rules:
+  status: draft
+  passport_retention_prohibited: true
+  max_weekly_hours: null
+  minimum_monthly_wage:
+    amount: 1000
+    currency: QAR
+    period: month
+  notes:
+    - Qatar has a minimum basic wage, plus allowances for food and housing when the employer does not provide them. Confirm the current figures on the Ministry of Labour site.
+    - Employers may not keep a worker's passport.
+  sources:
+    - title: Ministry of Labour
+      url: https://www.mol.gov.qa
+visa_routes:
+  - id: qa-work
+    name: Work residence permit
+    purpose: work
+    status: draft
+    last_verified: null
+    summary: The employer sponsors the work visa. In sending countries with a Qatar Visa Center, biometrics, the medical exam and contract signing happen there before travel.
+    sources:
+      - title: Qatar Visa Center
+        url: https://www.qatarvisacenter.com
+      - title: Ministry of Labour
+        url: https://www.mol.gov.qa
+    steps:
+      - order: 1
+        title: Job offer through a licensed recruiter
+        description: Get a written offer and check the recruiter's licence in your home country.
+        who: recruiter
+      - order: 2
+        title: Employer applies for the work visa
+        description: The Qatari employer applies; the visa profession should match the job you were promised.
+        who: employer
+      - order: 3
+        title: Visa center appointment
+        description: Complete biometrics, the medical exam and the electronic contract signing at the Qatar Visa Center. Read the contract on screen before you sign.
+        who: worker
+        official_url: https://www.qatarvisacenter.com
+      - order: 4
+        title: Departure formalities at home
+        description: Complete your home country's emigration registration, insurance and briefing.
+        who: worker
+      - order: 5
+        title: Residence permit after arrival
+        description: The employer completes your residence permit. Keep your own passport.
+        who: employer
+    documents:
+      - Passport
+      - Job offer
+      - Educational or trade certificates if required
+    requirements:
+      - id: qa-visa-center
+        kind: medical
+        title: Biometrics, medical and contract signing
+        description: Done at the Qatar Visa Center where one operates in your country.
+        status: draft
+        sources:
+          - title: Qatar Visa Center
+            url: https://www.qatarvisacenter.com
+ladder_days: [0, 7, 14]

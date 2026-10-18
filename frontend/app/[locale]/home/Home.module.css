@@ -1,0 +1,52 @@
+.stepOf {
+  align-self: center;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+/* The way to emergency help, said in words as well as by the SOS button in the corner. */
+.sos {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: var(--tap);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--red);
+  border-inline-start-width: 5px;
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.sosIcon {
+  flex: none;
+  color: var(--red);
+}
+
+.sosText {
+  display: grid;
+  gap: 2px;
+}
+
+.sosTitle {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.sosAction {
+  color: var(--red);
+  font-weight: var(--w-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+}
+:lang(ur) .sosAction,
+:lang(pa) .sosAction {
+  text-underline-offset: 0.6em;
+}
+
+.note {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}

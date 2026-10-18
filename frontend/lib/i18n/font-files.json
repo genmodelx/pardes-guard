@@ -1,0 +1,30 @@
+{
+ "Atkinson Hyperlegible Next": {
+  "latin": "/fonts/atkinson-hyperlegible-next-latin.woff2",
+  "latin-ext": "/fonts/atkinson-hyperlegible-next-latin-ext.woff2"
+ },
+ "Atkinson Hyperlegible Mono": {
+  "latin": "/fonts/atkinson-hyperlegible-mono-latin.woff2"
+ },
+ "Noto Nastaliq Urdu": {
+  "arabic": "/fonts/noto-nastaliq-urdu-arabic.woff2"
+ },
+ "Noto Naskh Arabic": {
+  "arabic": "/fonts/noto-naskh-arabic-arabic.woff2"
+ },
+ "Noto Sans Devanagari": {
+  "devanagari": "/fonts/noto-sans-devanagari-devanagari.woff2"
+ },
+ "Noto Sans Bengali": {
+  "bengali": "/fonts/noto-sans-bengali-bengali.woff2"
+ },
+ "Noto Sans Sinhala": {
+  "sinhala": "/fonts/noto-sans-sinhala-sinhala.woff2"
+ },
+ "Noto Sans Tamil": {
+  "tamil": "/fonts/noto-sans-tamil-tamil.woff2"
+ },
+ "Pardes Zero": {
+  "zero": "/fonts/pardes-zero.woff2"
+ }
+}

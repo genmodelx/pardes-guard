@@ -1,0 +1,115 @@
+.route {
+  margin: 0;
+  font-weight: var(--w-strong);
+}
+
+.label {
+  color: var(--ink-soft);
+  font-weight: normal;
+}
+
+.topics {
+  display: grid;
+  gap: var(--s2);
+  margin: 0;
+  padding-inline-start: 1.25em;
+  list-style: disc;
+}
+
+.note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.problem {
+  margin: 0;
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.form {
+  display: grid;
+  gap: var(--s3);
+}
+
+.listening {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  margin: 0;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--green-tint);
+  font-weight: var(--w-strong);
+}
+
+.wave {
+  flex: none;
+  color: var(--green);
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+.waiting {
+  margin: 0;
+  color: var(--ink-soft);
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave,
+  .waiting {
+    animation: none;
+  }
+}
+
+.card {
+  display: grid;
+  gap: var(--s4);
+  justify-items: start;
+}
+
+.scores {
+  display: grid;
+  gap: var(--s3);
+  inline-size: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* One topic: its words, how fully it was answered, and one tip. */
+.score {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.score h3,
+.score p {
+  margin: 0;
+}
+
+.score h3 {
+  font-size: var(--fs-body);
+}
+
+.overall {
+  margin: 0;
+}

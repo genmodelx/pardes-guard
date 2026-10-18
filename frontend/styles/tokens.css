@@ -1,0 +1,209 @@
+/* Pardes Guard tokens. See DESIGN.md section 3 and 4.
+   Components use these names only. Text pairs are contrast-tested in tests/design.test.ts,
+   which reads the light and dark blocks below, so keep one declaration per line. */
+
+/* pg:light */
+:root,
+[data-theme="light"] {
+  --paper: #eef2ee;
+  --sheet: #ffffff;
+  --ink: #15211b;
+  --ink-soft: #4a5a52;
+  --rule: #c9d4cc;
+  --rule-strong: #7d8f85;
+  --green: #0e4a37;
+  --green-ink: #ffffff;
+  --green-tint: #dfeae3;
+  --red: #b3242a;
+  --red-ink: #ffffff;
+  --red-tint: #f6e3e3;
+  --amber: #9a6a12;
+  --amber-ink: #6f4a08;
+  --amber-tint: #f5ecd9;
+  --ok: #1d6e47;
+  --ok-tint: #e0efe6;
+  --focus: #1f6feb;
+  --stamp-blend: multiply;
+  --pattern-ink: #9db3a6;
+  color-scheme: light;
+}
+/* pg:end */
+
+/* pg:dark */
+[data-theme="dark"] {
+  --paper: #0f1613;
+  --sheet: #17211c;
+  --ink: #e6eee9;
+  --ink-soft: #a3b3aa;
+  --rule: #2c3a33;
+  --rule-strong: #6f8278;
+  --green: #7fc4a4;
+  --green-ink: #0f1613;
+  --green-tint: #1d2f27;
+  --red: #f08a8a;
+  --red-ink: #0f1613;
+  --red-tint: #3a1f20;
+  --amber: #e2b65c;
+  --amber-ink: #e2b65c;
+  --amber-tint: #352b17;
+  --ok: #6fcf97;
+  --ok-tint: #18301f;
+  --focus: #7ab7ff;
+  --stamp-blend: normal;
+  --pattern-ink: #3d5247;
+  color-scheme: dark;
+}
+/* pg:end */
+
+/* The phone's own setting applies until the person chooses a theme in Settings.
+   Keep in step with the dark block above (tests/design.test.ts checks they match). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1613;
+    --sheet: #17211c;
+    --ink: #e6eee9;
+    --ink-soft: #a3b3aa;
+    --rule: #2c3a33;
+    --rule-strong: #6f8278;
+    --green: #7fc4a4;
+    --green-ink: #0f1613;
+    --green-tint: #1d2f27;
+    --red: #f08a8a;
+    --red-ink: #0f1613;
+    --red-tint: #3a1f20;
+    --amber: #e2b65c;
+    --amber-ink: #e2b65c;
+    --amber-tint: #352b17;
+    --ok: #6fcf97;
+    --ok-tint: #18301f;
+    --focus: #7ab7ff;
+    --stamp-blend: normal;
+    --pattern-ink: #3d5247;
+    color-scheme: dark;
+  }
+}
+
+:root {
+  /* Shape and space */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --tap: 52px;
+  --control: 56px;
+  --col: 680px;
+  --col-wide: 980px;
+  --gutter: 16px;
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --bar-h: 64px;
+
+  /* Type scale in rem, so the phone's text-size setting and 200% zoom both work. */
+  --t-small: 0.9375rem; /* 15px */
+  --t-body: 1.125rem; /* 18px */
+  --t-h2: 1.375rem; /* 22px */
+  --t-h1: 1.75rem; /* 28px */
+  --t-display: 2.25rem; /* 36px */
+
+  /* Font stacks. Each web font has a unicode-range, so a stack only downloads what the text needs. */
+  --stack-system: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  /* "Pardes Zero" holds one glyph, a plain 0, and comes first so amounts never show a slashed zero. */
+  --font-latin: "Pardes Zero", "Atkinson Hyperlegible Next", var(--stack-system);
+  --font-nastaliq: "Noto Nastaliq Urdu", "Pardes Zero", "Atkinson Hyperlegible Next", "Jameel Noori Nastaleeq", "Noto Naskh Arabic", var(--stack-system);
+  --font-naskh: "Noto Naskh Arabic", "Pardes Zero", "Atkinson Hyperlegible Next", var(--stack-system);
+  --font-devanagari: "Pardes Zero", "Atkinson Hyperlegible Next", "Noto Sans Devanagari", var(--stack-system);
+  --font-bengali: "Pardes Zero", "Atkinson Hyperlegible Next", "Noto Sans Bengali", var(--stack-system);
+  --font-sinhala: "Pardes Zero", "Atkinson Hyperlegible Next", "Noto Sans Sinhala", var(--stack-system);
+  --font-tamil: "Pardes Zero", "Atkinson Hyperlegible Next", "Noto Sans Tamil", var(--stack-system);
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Simple mode raises this to 1.15. */
+  --user-scale: 1;
+}
+
+[data-simple="on"] {
+  --user-scale: 1.15;
+}
+
+/* Per-script type settings. They sit on any element that carries a lang attribute, so an Urdu
+   answer inside an English page gets Urdu type, and the other way round. */
+:root,
+[lang] {
+  --font-body: var(--font-latin);
+  --scale: 1;
+  --lh-body: 1.5;
+  --lh-title: 1.2;
+  --w-title: 800;
+  --w-strong: 700;
+}
+
+[lang|="ur"],
+[lang|="pa"] {
+  --font-body: var(--font-nastaliq);
+  --scale: 1.1;
+  --lh-body: 2;
+  --lh-title: 1.8;
+  --w-title: 700;
+  --w-strong: 700;
+}
+
+[lang|="ps"],
+[lang|="ar"],
+[lang|="sd"] {
+  --font-body: var(--font-naskh);
+  --scale: 1.05;
+  --lh-body: 1.8;
+  --lh-title: 1.5;
+  --w-title: 700;
+}
+
+[lang|="hi"],
+[lang|="ne"] {
+  --font-body: var(--font-devanagari);
+  --lh-body: 1.7;
+  --lh-title: 1.4;
+  --w-title: 700;
+}
+
+[lang|="bn"] {
+  --font-body: var(--font-bengali);
+  --lh-body: 1.7;
+  --lh-title: 1.4;
+  --w-title: 700;
+}
+
+[lang|="si"] {
+  --font-body: var(--font-sinhala);
+  --lh-body: 1.7;
+  --lh-title: 1.4;
+  --w-title: 700;
+}
+
+[lang|="ta"] {
+  --font-body: var(--font-tamil);
+  --lh-body: 1.7;
+  --lh-title: 1.4;
+  --w-title: 700;
+}
+
+/* Sizes that follow the script and simple mode. Declared on the same elements as the settings
+   above so that a nested lang block recomputes them. */
+:root,
+[lang],
+[data-simple] {
+  --fs-small: calc(var(--t-small) * var(--scale) * var(--user-scale));
+  --fs-body: calc(var(--t-body) * var(--scale) * var(--user-scale));
+  --fs-h2: calc(var(--t-h2) * var(--scale) * var(--user-scale));
+  --fs-h1: calc(var(--t-h1) * var(--scale) * var(--user-scale));
+  --fs-display: calc(var(--t-display) * var(--scale) * var(--user-scale));
+}
+
+@media (min-width: 400px) {
+  :root {
+    --gutter: 20px;
+  }
+}

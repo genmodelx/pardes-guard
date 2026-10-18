@@ -1,0 +1,95 @@
+# Japan destination pack. STATUS: draft, verify before launch.
+code: JP
+name: Japan
+kind: destination
+languages: [ja, en]
+currency: JPY
+status: draft
+last_verified: null
+official_sources:
+  - title: Specified Skilled Worker portal
+    url: https://www.ssw.go.jp/en/
+  - title: Immigration Services Agency of Japan
+    url: https://www.moj.go.jp/isa/
+official_domains: [ssw.go.jp, moj.go.jp, mofa.go.jp, jlpt.jp, jpf.go.jp]
+red_flag_visa_types: [temporary visitor, tourist, short-term stay]
+labour_rules:
+  status: draft
+  notes:
+    - Specified Skilled Workers are covered by Japanese labour law and should be paid at least what a Japanese worker would get for the same job. Confirm on the official portal.
+  sources:
+    - title: Specified Skilled Worker portal
+      url: https://www.ssw.go.jp/en/
+visa_routes:
+  - id: jp-ssw1
+    name: Specified Skilled Worker (i)
+    purpose: work
+    status: draft
+    last_verified: null
+    summary: For workers in listed sectors who pass a sector skills test and a Japanese language test.
+    sources:
+      - title: Specified Skilled Worker portal
+        url: https://www.ssw.go.jp/en/
+    steps:
+      - order: 1
+        title: Pick a listed sector
+        description: Check that your job is in one of the sectors open to Specified Skilled Workers.
+        who: worker
+        official_url: https://www.ssw.go.jp/en/
+      - order: 2
+        title: Pass the sector skills test
+        description: Each sector has its own skills test.
+        who: worker
+        official_url: https://www.ssw.go.jp/en/
+      - order: 3
+        title: Pass a Japanese language test
+        description: JFT-Basic at A2, or JLPT N4 or higher.
+        who: worker
+      - order: 4
+        title: Employment contract with a Japanese employer
+        description: The employer signs a contract and applies for your Certificate of Eligibility.
+        who: employer
+      - order: 5
+        title: Visa application
+        description: Apply for the visa at the Japanese embassy with the Certificate of Eligibility.
+        who: worker
+        official_url: https://www.moj.go.jp/isa/
+    documents:
+      - Passport
+      - Skills test pass certificate
+      - Japanese language test result
+      - Employment contract
+      - Certificate of Eligibility
+    requirements:
+      - id: jp-ssw-age
+        kind: age
+        title: Age 18 or older
+        description: Applicants must be at least 18.
+        rule: {type: range, field: age, min: 18}
+        status: draft
+        sources:
+          - title: Specified Skilled Worker portal
+            url: https://www.ssw.go.jp/en/
+      - id: jp-ssw-language
+        kind: language_test
+        title: Japanese language test
+        description: JFT-Basic at A2, or JLPT N4 or higher.
+        rule:
+          type: language_any_of
+          options:
+            - {test: JFT_BASIC, min_level: A2, level_order: [below_A2, A2]}
+            - {test: JLPT, min_level: N4, level_order: [N5, N4, N3, N2, N1]}
+        status: draft
+        sources:
+          - title: Specified Skilled Worker portal
+            url: https://www.ssw.go.jp/en/
+      - id: jp-ssw-skills
+        kind: skills_test
+        title: Sector skills test
+        description: Pass the skills test for your sector.
+        rule: {type: bool_true, field: has_skills_certificate}
+        status: draft
+        sources:
+          - title: Specified Skilled Worker portal
+            url: https://www.ssw.go.jp/en/
+ladder_days: [0, 7, 14]

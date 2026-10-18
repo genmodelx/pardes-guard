@@ -1,0 +1,134 @@
+.field {
+  display: grid;
+  /* A field never asks for more width than it is given: at large text sizes a date or a long
+     choice would otherwise push the whole screen wider than the phone. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s2);
+}
+
+.label {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.hint {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.input {
+  flex: 1;
+  min-inline-size: 0;
+  inline-size: 100%;
+  min-block-size: var(--control);
+  padding-block: var(--s2);
+  padding-inline: var(--s4);
+  border: 2px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  line-height: var(--lh-body);
+}
+
+.row .input {
+  inline-size: auto;
+  flex-basis: 160px;
+}
+
+.input::placeholder {
+  color: var(--ink-soft);
+  opacity: 1;
+}
+
+.input:focus-visible {
+  border-color: var(--green);
+  border-radius: var(--radius);
+}
+
+.ltr {
+  font-family: var(--font-latin);
+  line-height: 1.5;
+  text-align: start;
+}
+
+.area {
+  resize: vertical;
+  min-block-size: 120px;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  padding-inline-end: var(--s7);
+}
+
+.caret {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: var(--s4);
+  transform: translateY(-50%);
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.invalid .input {
+  border-color: var(--red);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s2);
+  color: var(--red);
+  font-weight: 600;
+}
+.error svg {
+  margin-block-start: 0.2em;
+}
+
+.mic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  min-block-size: var(--control);
+  padding-inline: var(--s4);
+  border: 2px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--green);
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.micOn {
+  background: var(--green);
+  color: var(--green-ink);
+}
+
+.micNote {
+  flex-basis: 100%;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.under {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}

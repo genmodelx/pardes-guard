@@ -1,0 +1,2866 @@
+[
+ {
+  "i18n": {},
+  "code": "AU",
+  "name": "Australia",
+  "kind": "destination",
+  "languages": [
+   "en"
+  ],
+  "currency": "AUD",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Department of Home Affairs, immigration and citizenship",
+    "url": "https://immi.homeaffairs.gov.au"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "Paying for a visa sponsorship or a job offer is not allowed in Australia's sponsored visa programmes."
+   ],
+   "sources": [
+    {
+     "title": "Department of Home Affairs",
+     "url": "https://immi.homeaffairs.gov.au"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visitor",
+   "tourist",
+   "eta"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "au-189",
+    "name": "Skilled Independent visa (subclass 189)",
+    "purpose": "skilled_migration",
+    "summary": "Points-tested permanent visa. You need an occupation on the relevant list, a positive skills assessment, competent English and an invitation through SkillSelect.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Skills assessment",
+      "description": "From the assessing authority for your occupation.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "English test",
+      "description": "Meet at least competent English; higher scores give more points.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Expression of interest in SkillSelect",
+      "description": "Submit an EOI and wait for an invitation.",
+      "who": "worker",
+      "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Apply after invitation",
+      "description": "Lodge the visa application within the deadline.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Skills assessment",
+     "English test result",
+     "Evidence for points claimed"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "au-189-age",
+      "kind": "age",
+      "title": "Under 45 when invited",
+      "description": "You must be under 45 at the time of invitation.",
+      "rule": {
+       "type": "range",
+       "field": "age",
+       "min": null,
+       "max": 44.0
+      },
+      "sources": [
+       {
+        "title": "Skilled Independent visa (subclass 189)",
+        "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "au-189-english",
+      "kind": "language_test",
+      "title": "At least competent English",
+      "description": "Check the current accepted tests and scores on the Home Affairs page before booking.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Skilled Independent visa (subclass 189)",
+        "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "au-189-skills",
+      "kind": "skills_test",
+      "title": "Positive skills assessment",
+      "description": "From the assessing authority for your nominated occupation.",
+      "rule": {
+       "type": "bool_true",
+       "field": "has_skills_certificate"
+      },
+      "sources": [
+       {
+        "title": "Skilled Independent visa (subclass 189)",
+        "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Skilled Independent visa (subclass 189)",
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {},
+    "id": "au-student",
+    "name": "Student visa (subclass 500)",
+    "purpose": "study",
+    "summary": "For full-time study at a registered course; needs a confirmation of enrolment, English, funds and health insurance.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Confirmation of enrolment",
+      "description": "From your education provider.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Health insurance and funds",
+      "description": "Arrange the required health cover and show enough money.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Apply online",
+      "description": "Through ImmiAccount.",
+      "who": "worker",
+      "official_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Confirmation of enrolment",
+     "English test result",
+     "Proof of funds and health cover"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "au-student-english",
+      "kind": "language_test",
+      "title": "English test, as required",
+      "description": "Check the current accepted tests and scores on the Home Affairs page.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Student visa (subclass 500)",
+        "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Student visa (subclass 500)",
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "immi.homeaffairs.gov.au",
+   "homeaffairs.gov.au"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "CA",
+  "name": "Canada",
+  "kind": "destination",
+  "languages": [
+   "en",
+   "fr"
+  ],
+  "currency": "CAD",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Immigration, Refugees and Citizenship Canada",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship.html"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "Legitimate Canadian employers and immigration programmes do not ask you to pay for a job offer. Fees for \"guaranteed\" job offers are a known scam."
+   ],
+   "sources": [
+    {
+     "title": "IRCC",
+     "url": "https://www.canada.ca/en/immigration-refugees-citizenship.html"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visitor",
+   "tourist",
+   "temporary resident visa"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "ca-express-entry-fsw",
+    "name": "Express Entry, Federal Skilled Worker",
+    "purpose": "skilled_migration",
+    "summary": "Permanent residence for skilled workers, ranked by points. You need an approved language test, education, skilled work experience and, without a job offer, proof of funds.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Take an approved language test",
+      "description": "IELTS General Training, CELPIP-General, PTE Core, or a French test. Results must be recent.",
+      "who": "worker",
+      "official_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Get an educational credential assessment",
+      "description": "Foreign degrees need an assessment from a designated organisation.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Create an Express Entry profile",
+      "description": "You get a points score and enter the pool.",
+      "who": "worker",
+      "official_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Invitation to apply",
+      "description": "If your score is high enough in a draw, you are invited to apply for permanent residence.",
+      "who": "government",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 5,
+      "id": "s5",
+      "title": "Submit the application",
+      "description": "Upload documents, medical exam and police certificates within the deadline.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Language test results",
+     "Educational credential assessment",
+     "Proof of work experience",
+     "Proof of funds, unless you have a valid job offer",
+     "Police certificates and medical exam, when asked"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "ca-fsw-language",
+      "kind": "language_test",
+      "title": "Language at CLB 7 in all four abilities",
+      "description": "For IELTS General Training that is 6.0 in each of listening, reading, writing and speaking; for CELPIP-General, 7 in each.",
+      "rule": {
+       "type": "language_any_of",
+       "options": [
+        {
+         "test": "IELTS_GT",
+         "min_overall": null,
+         "min_each": {
+          "listening": 6.0,
+          "reading": 6.0,
+          "writing": 6.0,
+          "speaking": 6.0
+         },
+         "min_level": null,
+         "level_order": null
+        },
+        {
+         "test": "CELPIP_G",
+         "min_overall": null,
+         "min_each": {
+          "listening": 7.0,
+          "reading": 7.0,
+          "writing": 7.0,
+          "speaking": 7.0
+         },
+         "min_level": null,
+         "level_order": null
+        },
+        {
+         "test": "PTE_CORE",
+         "min_overall": null,
+         "min_each": null,
+         "min_level": null,
+         "level_order": null
+        }
+       ]
+      },
+      "sources": [
+       {
+        "title": "Express Entry language requirements",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "ca-fsw-experience",
+      "kind": "experience",
+      "title": "At least 1 year of skilled work experience",
+      "description": "Continuous paid skilled work in the last 10 years.",
+      "rule": {
+       "type": "range",
+       "field": "experience_years",
+       "min": 1.0,
+       "max": null
+      },
+      "sources": [
+       {
+        "title": "Express Entry",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "ca-fsw-education",
+      "kind": "education",
+      "title": "Completed secondary or post-secondary education",
+      "description": "Foreign education needs an educational credential assessment.",
+      "rule": {
+       "type": "min_level",
+       "field": "education_level",
+       "min": "secondary",
+       "order": [
+        "none",
+        "primary",
+        "secondary",
+        "higher_secondary",
+        "diploma",
+        "bachelor",
+        "master",
+        "phd"
+       ]
+      },
+      "sources": [
+       {
+        "title": "Express Entry",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "ca-fsw-funds",
+      "kind": "financial",
+      "title": "Proof of settlement funds",
+      "description": "Needed unless you have a valid job offer; the amount depends on family size and is updated regularly.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Express Entry",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+     },
+     {
+      "title": "Express Entry language requirements",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {},
+    "id": "ca-study",
+    "name": "Study permit",
+    "purpose": "study",
+    "summary": "For students accepted by a designated learning institution. Most applicants also need a provincial attestation letter and proof of funds.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Get an acceptance letter",
+      "description": "From a designated learning institution.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Get a provincial or territorial attestation letter",
+      "description": "Most study permit applicants need one; check if you are exempt.",
+      "who": "worker",
+      "official_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Apply online",
+      "description": "With proof of funds, biometrics and any medical exam asked for.",
+      "who": "worker",
+      "official_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Acceptance letter",
+     "Provincial or territorial attestation letter",
+     "Proof of funds"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "ca-study-language",
+      "kind": "language_test",
+      "title": "English or French test, as your institution requires",
+      "description": "The minimum score is set by your institution and programme.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Study permit",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Study permit",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "canada.ca",
+   "cic.gc.ca"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "JP",
+  "name": "Japan",
+  "kind": "destination",
+  "languages": [
+   "ja",
+   "en"
+  ],
+  "currency": "JPY",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Specified Skilled Worker portal",
+    "url": "https://www.ssw.go.jp/en/"
+   },
+   {
+    "title": "Immigration Services Agency of Japan",
+    "url": "https://www.moj.go.jp/isa/"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "Specified Skilled Workers are covered by Japanese labour law and should be paid at least what a Japanese worker would get for the same job. Confirm on the official portal."
+   ],
+   "sources": [
+    {
+     "title": "Specified Skilled Worker portal",
+     "url": "https://www.ssw.go.jp/en/"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "temporary visitor",
+   "tourist",
+   "short-term stay"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "jp-ssw1",
+    "name": "Specified Skilled Worker (i)",
+    "purpose": "work",
+    "summary": "For workers in listed sectors who pass a sector skills test and a Japanese language test.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Pick a listed sector",
+      "description": "Check that your job is in one of the sectors open to Specified Skilled Workers.",
+      "who": "worker",
+      "official_url": "https://www.ssw.go.jp/en/",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Pass the sector skills test",
+      "description": "Each sector has its own skills test.",
+      "who": "worker",
+      "official_url": "https://www.ssw.go.jp/en/",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Pass a Japanese language test",
+      "description": "JFT-Basic at A2, or JLPT N4 or higher.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Employment contract with a Japanese employer",
+      "description": "The employer signs a contract and applies for your Certificate of Eligibility.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 5,
+      "id": "s5",
+      "title": "Visa application",
+      "description": "Apply for the visa at the Japanese embassy with the Certificate of Eligibility.",
+      "who": "worker",
+      "official_url": "https://www.moj.go.jp/isa/",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Skills test pass certificate",
+     "Japanese language test result",
+     "Employment contract",
+     "Certificate of Eligibility"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "jp-ssw-age",
+      "kind": "age",
+      "title": "Age 18 or older",
+      "description": "Applicants must be at least 18.",
+      "rule": {
+       "type": "range",
+       "field": "age",
+       "min": 18.0,
+       "max": null
+      },
+      "sources": [
+       {
+        "title": "Specified Skilled Worker portal",
+        "url": "https://www.ssw.go.jp/en/"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "jp-ssw-language",
+      "kind": "language_test",
+      "title": "Japanese language test",
+      "description": "JFT-Basic at A2, or JLPT N4 or higher.",
+      "rule": {
+       "type": "language_any_of",
+       "options": [
+        {
+         "test": "JFT_BASIC",
+         "min_overall": null,
+         "min_each": null,
+         "min_level": "A2",
+         "level_order": [
+          "below_A2",
+          "A2"
+         ]
+        },
+        {
+         "test": "JLPT",
+         "min_overall": null,
+         "min_each": null,
+         "min_level": "N4",
+         "level_order": [
+          "N5",
+          "N4",
+          "N3",
+          "N2",
+          "N1"
+         ]
+        }
+       ]
+      },
+      "sources": [
+       {
+        "title": "Specified Skilled Worker portal",
+        "url": "https://www.ssw.go.jp/en/"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "jp-ssw-skills",
+      "kind": "skills_test",
+      "title": "Sector skills test",
+      "description": "Pass the skills test for your sector.",
+      "rule": {
+       "type": "bool_true",
+       "field": "has_skills_certificate"
+      },
+      "sources": [
+       {
+        "title": "Specified Skilled Worker portal",
+        "url": "https://www.ssw.go.jp/en/"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Specified Skilled Worker portal",
+      "url": "https://www.ssw.go.jp/en/"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "ssw.go.jp",
+   "moj.go.jp",
+   "mofa.go.jp",
+   "jlpt.jp",
+   "jpf.go.jp"
+  ]
+ },
+ {
+  "i18n": {
+   "ur": {
+    "name": "پاکستان",
+    "regulator": "بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ (وزارت سمندر پار پاکستانیز و ترقی انسانی وسائل)"
+   }
+  },
+  "code": "PK",
+  "name": "Pakistan",
+  "kind": "origin",
+  "languages": [
+   "ur",
+   "en",
+   "pa",
+   "ps",
+   "sd"
+  ],
+  "currency": "PKR",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Bureau of Emigration & Overseas Employment",
+    "url": "https://beoe.gov.pk"
+   },
+   {
+    "title": "Overseas Pakistanis Foundation",
+    "url": "https://opf.org.pk"
+   },
+   {
+    "title": "Overseas Employment Corporation (government recruiter, incl. Korea EPS)",
+    "url": "https://www.oec.gov.pk"
+   }
+  ],
+  "regulator": "Bureau of Emigration & Overseas Employment (Ministry of Overseas Pakistanis & HRD)",
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [
+   {
+    "i18n": {
+     "ur": {
+      "title": "صرف لائسنس یافتہ اوورسیز ایمپلائمنٹ پروموٹر کے ذریعے جائیں",
+      "description": "کوئی بھی پیسہ دینے سے پہلے بیورو کی ویب سائٹ پر پروموٹر کا لائسنس چیک کریں، اور ہر ادائیگی کی تحریری رسید مانگیں۔"
+     }
+    },
+    "id": "licensed-recruiter",
+    "title": "Use only a licensed Overseas Employment Promoter",
+    "description": "Check the promoter's licence on the Bureau's website before paying anything, and ask for a written receipt for every payment.",
+    "official_url": "https://beoe.gov.pk",
+    "who": "worker",
+    "document_id": null,
+    "purposes": [
+     "work",
+     "seasonal"
+    ]
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "ایسا تحریری کنٹریکٹ لیں جو آپ کو سمجھ آئے",
+      "description": "دستخط سے پہلے تنخواہ، کام کے گھنٹے، رہائش، کھانا، علاج اور واپسی کے ٹکٹ کی شرائط پڑھ لیں۔ ایک کاپی مانگیں۔"
+     }
+    },
+    "id": "written-contract",
+    "title": "Get a written contract you understand",
+    "description": "Read the salary, hours, accommodation, food, medical cover and return ticket terms before you sign. Ask for a copy.",
+    "official_url": null,
+    "who": "worker",
+    "document_id": null,
+    "purposes": [
+     "work",
+     "seasonal"
+    ]
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "پروٹیکٹر آف امیگرنٹس کے پاس اندراج کروائیں",
+      "description": "باہر جانے والوں کا اندراج روانگی سے پہلے پروٹیکٹر آف امیگرنٹس کے دفتر میں ہوتا ہے۔ وزٹ ویزے پر کام کے لیے سفر نہ کریں۔"
+     }
+    },
+    "id": "protector-registration",
+    "title": "Register with the Protector of Emigrants",
+    "description": "Emigrants are processed at a Protector of Emigrants office before departure. Do not travel for work on a visit visa.",
+    "official_url": "https://beoe.gov.pk",
+    "who": "worker",
+    "document_id": "protector-registration",
+    "purposes": [
+     "work",
+     "seasonal"
+    ]
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "امیگرنٹ انشورنس",
+      "description": "اسٹیٹ لائف امیگرنٹس انشورنس فنڈ کی انشورنس بیورو کے امیگریشن کے عمل کا حصہ ہے۔"
+     }
+    },
+    "id": "emigrant-insurance",
+    "title": "Emigrant insurance",
+    "description": "Insurance through the State Life Emigrants Insurance Fund is part of the Bureau's emigration process.",
+    "official_url": "https://beoe.gov.pk",
+    "who": "worker",
+    "document_id": null,
+    "purposes": [
+     "work",
+     "seasonal"
+    ]
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "روانگی سے پہلے کی بریفنگ",
+      "description": "بریفنگ میں ضرور جائیں۔ اس میں آپ کے حقوق اور یہ بتایا جاتا ہے کہ باہر کس سے رابطہ کرنا ہے۔"
+     }
+    },
+    "id": "briefing",
+    "title": "Pre-departure briefing",
+    "description": "Attend the briefing; it covers your rights and who to contact abroad.",
+    "official_url": "https://beoe.gov.pk",
+    "who": "worker",
+    "document_id": null,
+    "purposes": [
+     "work",
+     "seasonal"
+    ]
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "کاپیاں اپنے گھر والوں کے پاس چھوڑیں",
+      "description": "اپنے پاسپورٹ، ویزے، کنٹریکٹ اور رسیدوں کی کاپیاں پردیس گارڈ کی تجوری میں رکھیں اور گھر کے کسی فرد سے شیئر کریں۔"
+     }
+    },
+    "id": "family-copies",
+    "title": "Leave copies with your family",
+    "description": "Keep copies of your passport, visa, contract and receipts in the Pardes Guard vault and share them with a family member.",
+    "official_url": null,
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   }
+  ],
+  "arrival_checklist": [],
+  "documents": [
+   {
+    "i18n": {
+     "ur": {
+      "title": "پاسپورٹ",
+      "summary": "وہ سفری کتابچہ جس کے بغیر آپ ملک سے باہر جا کر دوسرے ملک میں داخل نہیں ہو سکتے۔",
+      "issued_by": "ڈائریکٹوریٹ جنرل آف امیگریشن اینڈ پاسپورٹس"
+     }
+    },
+    "id": "passport",
+    "title": "Passport",
+    "summary": "The travel booklet you need to leave the country and enter another.",
+    "issued_by": "Directorate General of Immigration and Passports",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://dgip.gov.pk/eServices/online-passport.php",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "شناختی کارڈ (CNIC)",
+      "summary": "آپ کا قومی شناختی کارڈ۔",
+      "issued_by": "نادرا (NADRA)"
+     }
+    },
+    "id": "cnic",
+    "title": "CNIC (national identity card)",
+    "summary": "Your national identity card.",
+    "issued_by": "NADRA",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://id.nadra.gov.pk/",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "فیملی رجسٹریشن سرٹیفکیٹ (FRC)",
+      "summary": "وہ سرٹیفکیٹ جس میں آپ کے خاندان کے افراد درج ہوتے ہیں۔",
+      "issued_by": "نادرا (NADRA)"
+     }
+    },
+    "id": "frc",
+    "title": "FRC (Family Registration Certificate)",
+    "summary": "A certificate that lists the members of your family.",
+    "issued_by": "NADRA",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://id.nadra.gov.pk/",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "پولیس کریکٹر سرٹیفکیٹ",
+      "summary": "پولیس کی طرف سے آپ کے ریکارڈ کا سرٹیفکیٹ۔"
+     }
+    },
+    "id": "police-certificate",
+    "title": "Police character certificate",
+    "summary": "A certificate from the police about your record.",
+    "issued_by": null,
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": null,
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "ڈگری کی تصدیق (HEC)",
+      "summary": "ڈگری پر لگنے والی سرکاری مہر جو بتاتی ہے کہ ڈگری اصلی ہے۔",
+      "issued_by": "ایچ ای سی (HEC)"
+     }
+    },
+    "id": "degree-attestation-hec",
+    "title": "Degree attestation (HEC)",
+    "summary": "An official stamp on your degree that says the degree is genuine.",
+    "issued_by": "HEC",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://www.hec.gov.pk/english/services/students/DAS/Pages/Degree-Attestation.aspx",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "وزارت خارجہ کی تصدیق (MOFA)",
+      "summary": "سرٹیفکیٹ پر وزارت خارجہ کی سرکاری مہر، تاکہ وہ باہر استعمال ہو سکے۔",
+      "issued_by": "وزارت خارجہ (MOFA)"
+     }
+    },
+    "id": "mofa-attestation",
+    "title": "MOFA attestation",
+    "summary": "An official stamp from the foreign ministry on a certificate, so it can be used abroad.",
+    "issued_by": "MOFA",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://apostille.mofa.gov.pk/",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "آئی بی سی سی کی مساوات (IBCC equivalence)",
+      "summary": "وہ سرٹیفکیٹ جو بتاتا ہے کہ آپ کی اسکول کی سند کس کے برابر ہے۔",
+      "issued_by": "آئی بی سی سی (IBCC)"
+     }
+    },
+    "id": "ibcc-equivalence",
+    "title": "IBCC equivalence",
+    "summary": "A certificate that says what your school certificate is equal to.",
+    "issued_by": "IBCC",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://ibcc.edu.pk/",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "خلیج کا میڈیکل ٹیسٹ (Wafid / GAMCA)",
+      "summary": "خلیج کے ورک ویزے کا میڈیکل ٹیسٹ۔ آپ اسے خود Wafid کے ذریعے منظور شدہ سینٹر پر بک کرتے ہیں۔ میڈیکل «پاس» کروانے کے لیے ایجنٹ کو کبھی الگ پیسے نہ دیں۔",
+      "issued_by": "منظور شدہ میڈیکل سینٹر، جس کی بکنگ Wafid سے ہوتی ہے"
+     }
+    },
+    "id": "gulf-medical",
+    "title": "Gulf medical test (Wafid / GAMCA)",
+    "summary": "The medical exam for a Gulf work visa. You book it yourself at an approved centre through Wafid. Never pay an agent extra to \"pass\" a medical.",
+    "issued_by": "An approved medical centre, booked through Wafid",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://wafid.com",
+    "sources": [
+     {
+      "title": "Wafid (GCC-approved medical examination booking)",
+      "url": "https://wafid.com"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "پروٹیکٹر رجسٹریشن",
+      "summary": "باہر نوکری پر جانے والے مزدوروں کا اندراج روانگی سے پہلے پروٹیکٹر آف امیگرنٹس کے دفتر میں ہوتا ہے۔",
+      "issued_by": "پروٹیکٹر آف امیگرنٹس کا دفتر (بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ)"
+     }
+    },
+    "id": "protector-registration",
+    "title": "Protector registration",
+    "summary": "Workers going abroad for a job are registered at a Protector of Emigrants office before they leave.",
+    "issued_by": "Protector of Emigrants office (Bureau of Emigration & Overseas Employment)",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://beoe.gov.pk",
+    "sources": [
+     {
+      "title": "Bureau of Emigration & Overseas Employment",
+      "url": "https://beoe.gov.pk"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "complaint_channels": [
+   {
+    "i18n": {
+     "ur": {
+      "name": "بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ (پروموٹرز کے خلاف شکایات)"
+     }
+    },
+    "name": "Bureau of Emigration & Overseas Employment (complaints against promoters)",
+    "url": "https://beoe.gov.pk",
+    "description": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "name": "اوورسیز پاکستانیز فاؤنڈیشن"
+     }
+    },
+    "name": "Overseas Pakistanis Foundation",
+    "url": "https://opf.org.pk",
+    "description": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "name": "نیشنل سائبر کرائم انویسٹی گیشن ایجنسی (جعلی نوکریوں کے اشتہار اور آن لائن بھرتی کا فراڈ)",
+      "description": "جعلی نوکریوں کے اشتہار اور آن لائن بھرتی کے فراڈ کی رپورٹ کریں۔"
+     }
+    },
+    "name": "National Cyber Crime Investigation Agency (fake job adverts and online recruitment fraud)",
+    "url": null,
+    "description": "Report fake job adverts and online recruitment scams."
+   }
+  ],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [],
+   "sources": [],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [],
+  "visa_routes": [],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "beoe.gov.pk",
+   "opf.org.pk",
+   "oec.gov.pk",
+   "dgip.gov.pk",
+   "nadra.gov.pk",
+   "hec.gov.pk",
+   "mofa.gov.pk",
+   "ibcc.edu.pk"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "PH",
+  "name": "Philippines",
+  "kind": "origin",
+  "languages": [
+   "fil",
+   "en"
+  ],
+  "currency": "PHP",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Department of Migrant Workers",
+    "url": "https://dmw.gov.ph"
+   },
+   {
+    "title": "Overseas Workers Welfare Administration",
+    "url": "https://owwa.gov.ph"
+   }
+  ],
+  "regulator": "Department of Migrant Workers (DMW)",
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [
+   {
+    "i18n": {},
+    "id": "licensed-agency",
+    "title": "Use a DMW-licensed recruitment agency",
+    "description": "Check the agency's licence with the Department of Migrant Workers before paying anything.",
+    "official_url": "https://dmw.gov.ph",
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   },
+   {
+    "i18n": {},
+    "id": "written-contract",
+    "title": "Get a written contract you understand",
+    "description": "Compare the contract with what the agency promised before you sign.",
+    "official_url": null,
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   },
+   {
+    "i18n": {},
+    "id": "oec",
+    "title": "Overseas Employment Certificate",
+    "description": "Departing workers need their exit clearance processed through the DMW.",
+    "official_url": "https://dmw.gov.ph",
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   },
+   {
+    "i18n": {},
+    "id": "pdos",
+    "title": "Pre-Departure Orientation Seminar",
+    "description": "Attend the orientation; it covers your rights and contacts abroad.",
+    "official_url": "https://owwa.gov.ph",
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   }
+  ],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [
+   {
+    "i18n": {},
+    "name": "Department of Migrant Workers",
+    "url": "https://dmw.gov.ph",
+    "description": null
+   },
+   {
+    "i18n": {},
+    "name": "Overseas Workers Welfare Administration",
+    "url": "https://owwa.gov.ph",
+    "description": null
+   }
+  ],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [],
+   "sources": [],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [],
+  "visa_routes": [],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "dmw.gov.ph",
+   "owwa.gov.ph"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "QA",
+  "name": "Qatar",
+  "kind": "destination",
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "currency": "QAR",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Ministry of Labour",
+    "url": "https://www.mol.gov.qa"
+   },
+   {
+    "title": "Qatar Visa Center (biometrics, medical and contract signing in some sending countries)",
+    "url": "https://www.qatarvisacenter.com"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": true,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": {
+    "amount": 1000.0,
+    "currency": "QAR",
+    "period": "month"
+   },
+   "notes": [
+    "Qatar has a minimum basic wage, plus allowances for food and housing when the employer does not provide them. Confirm the current figures on the Ministry of Labour site.",
+    "Employers may not keep a worker's passport."
+   ],
+   "sources": [
+    {
+     "title": "Ministry of Labour",
+     "url": "https://www.mol.gov.qa"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visit",
+   "tourist",
+   "transit",
+   "hayya"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "qa-work",
+    "name": "Work residence permit",
+    "purpose": "work",
+    "summary": "The employer sponsors the work visa. In sending countries with a Qatar Visa Center, biometrics, the medical exam and contract signing happen there before travel.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Job offer through a licensed recruiter",
+      "description": "Get a written offer and check the recruiter's licence in your home country.",
+      "who": "recruiter",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Employer applies for the work visa",
+      "description": "The Qatari employer applies; the visa profession should match the job you were promised.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Visa center appointment",
+      "description": "Complete biometrics, the medical exam and the electronic contract signing at the Qatar Visa Center. Read the contract on screen before you sign.",
+      "who": "worker",
+      "official_url": "https://www.qatarvisacenter.com",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Departure formalities at home",
+      "description": "Complete your home country's emigration registration, insurance and briefing.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 5,
+      "id": "s5",
+      "title": "Residence permit after arrival",
+      "description": "The employer completes your residence permit. Keep your own passport.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Job offer",
+     "Educational or trade certificates if required"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "qa-visa-center",
+      "kind": "medical",
+      "title": "Biometrics, medical and contract signing",
+      "description": "Done at the Qatar Visa Center where one operates in your country.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Qatar Visa Center",
+        "url": "https://www.qatarvisacenter.com"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Qatar Visa Center",
+      "url": "https://www.qatarvisacenter.com"
+     },
+     {
+      "title": "Ministry of Labour",
+      "url": "https://www.mol.gov.qa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "mol.gov.qa",
+   "qatarvisacenter.com",
+   "portal.moi.gov.qa"
+  ]
+ },
+ {
+  "i18n": {
+   "ur": {
+    "name": "سعودی عرب"
+   }
+  },
+  "code": "SA",
+  "name": "Saudi Arabia",
+  "kind": "destination",
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "currency": "SAR",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Ministry of Human Resources and Social Development",
+    "url": "https://www.hrsd.gov.sa"
+   },
+   {
+    "title": "Qiwa (employment contracts and labour services)",
+    "url": "https://qiwa.sa"
+   },
+   {
+    "title": "Ministry of Foreign Affairs visa platform",
+    "url": "https://visa.mofa.gov.sa"
+   },
+   {
+    "title": "Wafid (GCC-approved medical examination booking)",
+    "url": "https://wafid.com"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [
+   {
+    "i18n": {
+     "ur": {
+      "title": "اقامہ بنوائیں",
+      "description": "آپ کا اقامہ (رہائشی اجازت نامہ) کمپنی بنواتی ہے۔"
+     }
+    },
+    "id": "iqama",
+    "title": "Get your residence permit (iqama)",
+    "description": "Your employer arranges your residence permit (iqama).",
+    "official_url": "https://qiwa.sa",
+    "who": "employer",
+    "document_id": null,
+    "purposes": []
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "اپنا کنٹریکٹ Qiwa پر دیکھیں",
+      "description": "اپنا کنٹریکٹ Qiwa پر دکھانے کو کہیں۔ ملازمت کے کنٹریکٹ وہیں درج ہوتے ہیں۔"
+     }
+    },
+    "id": "contract-qiwa",
+    "title": "See your contract on Qiwa",
+    "description": "Ask to see your contract on Qiwa. Employment contracts are documented there.",
+    "official_url": "https://qiwa.sa",
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "اپنا پاسپورٹ اپنے پاس رکھیں",
+      "description": "اپنا پاسپورٹ خود رکھیں۔ کمپنی کا مزدور کا پاسپورٹ رکھ لینا ایک جانا پہچانا ظلم ہے؛ موجودہ قانون وزارت کی ویب سائٹ پر دیکھیں۔"
+     }
+    },
+    "id": "keep-passport",
+    "title": "Keep your own passport",
+    "description": "Keep your passport yourself. Employers keeping a worker's passport is a known abuse; confirm the current rule on the Ministry site.",
+    "official_url": "https://www.hrsd.gov.sa",
+    "who": "worker",
+    "document_id": null,
+    "purposes": []
+   }
+  ],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {
+    "ur": {
+     "notes": [
+      "کمپنی کا مزدور کا پاسپورٹ اپنے پاس رکھ لینا ایک جانا پہچانا ظلم ہے؛ سعودی قانون اس پر پابندی لگاتا ہے۔ موجودہ قانون وزارت کی ویب سائٹ پر دیکھیں۔",
+      "ملازمت کے کنٹریکٹ Qiwa پلیٹ فارم پر درج ہوتے ہیں؛ کہیں کہ آپ کا کنٹریکٹ وہاں نظر آئے۔"
+     ]
+    }
+   },
+   "passport_retention_prohibited": true,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "Employers keeping a worker's passport is a known abuse; Saudi rules restrict it. Confirm the current rule on the Ministry site.",
+    "Employment contracts are documented on the Qiwa platform; ask for your contract to be visible there."
+   ],
+   "sources": [
+    {
+     "title": "Ministry of Human Resources and Social Development",
+     "url": "https://www.hrsd.gov.sa"
+    },
+    {
+     "title": "Qiwa",
+     "url": "https://qiwa.sa"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visit",
+   "tourist",
+   "umrah",
+   "hajj",
+   "transit",
+   "family visit",
+   "business visit"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {
+     "ur": {
+      "name": "ورک ویزا (ملازمت کا ویزا)",
+      "summary": "ویزا سعودی کمپنی اسپانسر کرتی ہے۔ مزدور کو جہاں ضروری ہو ہنر کی جانچ، میڈیکل ٹیسٹ، ویزا اسٹیمپنگ اور اپنے ملک میں روانگی کی کارروائی سے گزرنا ہوتا ہے۔",
+      "documents": [
+       "پاسپورٹ جس کی مدت ویزے کے لیے کافی ہو",
+       "دستخط شدہ آفر لیٹر یا کنٹریکٹ",
+       "منظور شدہ سینٹر کی میڈیکل رپورٹ",
+       "ہنر کی تصدیق کا نتیجہ، اگر آپ کے پیشے میں ضروری ہو",
+       "تعلیمی یا ہنر کے سرٹیفکیٹ، اگر نوکری میں ضروری ہوں"
+      ]
+     }
+    },
+    "id": "sa-work",
+    "name": "Employment visa",
+    "purpose": "work",
+    "summary": "A Saudi employer sponsors the visa. The worker goes through skill checks where required, a medical exam, visa stamping and departure formalities at home.",
+    "steps": [
+     {
+      "i18n": {
+       "ur": {
+        "title": "لائسنس یافتہ ایجنٹ کے ذریعے نوکری کی آفر",
+        "description": "اپنے ملک کے لائسنس یافتہ ایجنٹ سے تحریری آفر لیں۔ پیسے دینے سے پہلے پردیس گارڈ میں لائسنس چیک کریں۔"
+       }
+      },
+      "order": 1,
+      "id": "offer",
+      "title": "Job offer through a licensed recruiter",
+      "description": "Get a written offer from a recruiter licensed in your home country. Check the licence in Pardes Guard before paying.",
+      "who": "recruiter",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "کمپنی ورک ویزا کی درخواست دیتی ہے",
+        "description": "سعودی کمپنی آپ کے پیشے کے لیے ویزا کی منظوری لیتی ہے۔ ویزے پر لکھا پیشہ وہی ہونا چاہیے جس نوکری کا آپ سے وعدہ ہوا۔"
+       }
+      },
+      "order": 2,
+      "id": "employer-visa",
+      "title": "Employer requests the work visa",
+      "description": "The Saudi employer obtains the visa authorisation for your profession. The profession on the visa should match the job you were promised.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "ہنر کی تصدیق، اگر آپ کے پیشے میں ضروری ہو",
+        "description": "کچھ پیشوں میں ویزے سے پہلے ہنر کی تصدیق کا ٹیسٹ ضروری ہے۔ دیکھیں کہ آپ کا پیشہ فہرست میں ہے یا نہیں۔"
+       }
+      },
+      "order": 3,
+      "id": "skill-verification",
+      "title": "Skill verification, if your profession needs it",
+      "description": "Some professions need a skill verification test before the visa. Check whether yours is listed.",
+      "who": "worker",
+      "official_url": "https://qiwa.sa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "میڈیکل ٹیسٹ",
+        "description": "میڈیکل ٹیسٹ منظور شدہ سینٹر پر Wafid کے ذریعے بک کریں۔ میڈیکل «پاس» کروانے کے لیے ایجنٹ کو کبھی الگ پیسے نہ دیں۔"
+       }
+      },
+      "order": 4,
+      "id": "medical",
+      "title": "Medical examination",
+      "description": "Book the medical exam at an approved centre through Wafid. Never pay an agent extra to \"pass\" a medical.",
+      "who": "worker",
+      "official_url": "https://wafid.com",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "ویزا اسٹیمپنگ اور جانچ",
+        "description": "اسٹیمپنگ کے بعد ویزے کی تفصیل خود سرکاری ویزا پلیٹ فارم پر چیک کریں، خاص طور پر ویزے کی قسم اور پیشہ۔"
+       }
+      },
+      "order": 5,
+      "id": "visa-stamping",
+      "title": "Visa stamping and checking",
+      "description": "After stamping, check the visa details yourself on the official visa platform, especially the visa type and profession.",
+      "who": "government",
+      "official_url": "https://visa.mofa.gov.sa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "اپنے ملک میں روانگی کی کارروائی",
+        "description": "جہاز پر بیٹھنے سے پہلے اپنے ملک کی امیگریشن رجسٹریشن، انشورنس اور بریفنگ مکمل کریں۔"
+       }
+      },
+      "order": 6,
+      "id": "departure",
+      "title": "Departure formalities at home",
+      "description": "Complete your home country's emigration registration, insurance and briefing before you fly.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "departure"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "پہنچنے کے بعد اقامہ اور کنٹریکٹ",
+        "description": "آپ کا اقامہ کمپنی بنواتی ہے۔ اپنا کنٹریکٹ Qiwa پر دکھانے کو کہیں اور اپنا پاسپورٹ اپنے پاس رکھیں۔"
+       }
+      },
+      "order": 7,
+      "id": "arrival",
+      "title": "Residence permit and contract after arrival",
+      "description": "Your employer arranges your residence permit (iqama). Ask to see your contract on Qiwa and keep your own passport.",
+      "who": "employer",
+      "official_url": "https://qiwa.sa",
+      "typical_duration": null,
+      "stage": "arrival"
+     }
+    ],
+    "documents": [
+     "Passport with enough validity for the visa",
+     "Signed job offer or contract",
+     "Medical examination report from an approved centre",
+     "Skill verification result, if your profession needs it",
+     "Educational or trade certificates, if the job requires them"
+    ],
+    "document_ids": [
+     "passport",
+     "gulf-medical"
+    ],
+    "fees": [
+     {
+      "i18n": {
+       "ur": {
+        "item": "پاسپورٹ"
+       }
+      },
+      "id": "passport",
+      "item": "Passport",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [
+       "PK"
+      ],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "میڈیکل ٹیسٹ"
+       }
+      },
+      "id": "medical",
+      "item": "Medical examination",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "ہنر کی تصدیق کا ٹیسٹ، اگر آپ کے پیشے میں ضروری ہو"
+       }
+      },
+      "id": "skill-test",
+      "item": "Skill verification test, if your profession needs it",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "ورک ویزا"
+       }
+      },
+      "id": "visa",
+      "item": "Work visa",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "پروٹیکٹر رجسٹریشن"
+       }
+      },
+      "id": "protector",
+      "item": "Protector registration",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [
+       "PK"
+      ],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "امیگرنٹ انشورنس"
+       }
+      },
+      "id": "insurance",
+      "item": "Emigrant insurance",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [
+       "PK"
+      ],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "ہوائی جہاز کا ٹکٹ"
+       }
+      },
+      "id": "ticket",
+      "item": "Air ticket",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     }
+    ],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {
+       "ur": {
+        "title": "منظور شدہ سینٹر پر میڈیکل ٹیسٹ",
+        "description": "خلیجی ممالک کے منظور شدہ نظام سے بک کیا گیا میڈیکل ٹیسٹ ورک ویزا کے عمل کا حصہ ہے۔"
+       }
+      },
+      "id": "sa-medical",
+      "kind": "medical",
+      "title": "Medical examination at an approved centre",
+      "description": "A medical exam booked through the GCC-approved system is part of the work visa process.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Wafid",
+        "url": "https://wafid.com"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "فہرست میں شامل پیشوں کے لیے ہنر کی تصدیق",
+        "description": "کچھ پیشوں میں ویزا جاری ہونے سے پہلے ہنر کی تصدیق کا ٹیسٹ پاس کرنا ضروری ہے۔ دیکھیں کہ آپ کا پیشہ فہرست میں ہے یا نہیں۔"
+       }
+      },
+      "id": "sa-skill-verification",
+      "kind": "skills_test",
+      "title": "Skill verification for listed professions",
+      "description": "Some professions require passing a skill verification test before the visa is issued. Check whether yours is on the list.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Qiwa",
+        "url": "https://qiwa.sa"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "کارآمد پاسپورٹ",
+        "description": "آپ کا پاسپورٹ ویزے اور اقامے کی پوری مدت کے لیے کارآمد ہونا چاہیے۔ کم از کم مدت اپنے ایجنٹ اور سرکاری پلیٹ فارم سے معلوم کریں۔"
+       }
+      },
+      "id": "sa-passport",
+      "kind": "passport",
+      "title": "Valid passport",
+      "description": "Your passport must stay valid long enough for the visa and residence permit. Confirm the minimum with your recruiter and the official platform.",
+      "rule": null,
+      "sources": [],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Qiwa",
+      "url": "https://qiwa.sa"
+     },
+     {
+      "title": "Ministry of Foreign Affairs visa platform",
+      "url": "https://visa.mofa.gov.sa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "hrsd.gov.sa",
+   "qiwa.sa",
+   "mofa.gov.sa",
+   "visa.mofa.gov.sa",
+   "my.gov.sa",
+   "wafid.com"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "KR",
+  "name": "South Korea",
+  "kind": "destination",
+  "languages": [
+   "ko",
+   "en"
+  ],
+  "currency": "KRW",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Employment Permit System (EPS)",
+    "url": "https://www.eps.go.kr"
+   },
+   {
+    "title": "HRD Korea",
+    "url": "https://www.hrdkorea.or.kr"
+   },
+   {
+    "title": "Overseas Employment Corporation, Pakistan (EPS sending agency)",
+    "url": "https://www.oec.gov.pk"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "EPS workers are hired government-to-government; private agents promising a \"guaranteed\" EPS job for a fee are a known scam. Go through your country's official sending agency."
+   ],
+   "sources": [
+    {
+     "title": "Employment Permit System",
+     "url": "https://www.eps.go.kr"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "tourist",
+   "short-term visit",
+   "c-3"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "kr-eps",
+    "name": "Employment Permit System (E-9)",
+    "purpose": "work",
+    "summary": "A government-to-government programme. Workers pass the EPS-TOPIK Korean test and a skills check, then join a job-seeker roster that Korean employers choose from.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Register through your official sending agency",
+      "description": "In Pakistan this is the Overseas Employment Corporation. Do not pay private agents for EPS.",
+      "who": "worker",
+      "official_url": "https://www.oec.gov.pk",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Pass EPS-TOPIK",
+      "description": "The Korean language test for EPS.",
+      "who": "worker",
+      "official_url": "https://www.eps.go.kr",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Skills and competency check",
+      "description": "Some sectors add a skills test.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Job-seeker roster and employer selection",
+      "description": "Korean employers pick workers from the roster and sign a standard labour contract.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 5,
+      "id": "s5",
+      "title": "Visa issuance and pre-departure training",
+      "description": "The visa is issued after the contract; complete training before departure.",
+      "who": "government",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "EPS-TOPIK result",
+     "Standard labour contract"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "kr-eps-age",
+      "kind": "age",
+      "title": "Age 18 to 39",
+      "description": "EPS applicants are expected to be between 18 and 39.",
+      "rule": {
+       "type": "range",
+       "field": "age",
+       "min": 18.0,
+       "max": 39.0
+      },
+      "sources": [
+       {
+        "title": "Employment Permit System",
+        "url": "https://www.eps.go.kr"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "kr-eps-topik",
+      "kind": "language_test",
+      "title": "Pass EPS-TOPIK",
+      "description": "The pass mark is set per test round; check the current round's notice.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Employment Permit System",
+        "url": "https://www.eps.go.kr"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Employment Permit System",
+      "url": "https://www.eps.go.kr"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "eps.go.kr",
+   "hrdkorea.or.kr",
+   "oec.gov.pk"
+  ]
+ },
+ {
+  "i18n": {},
+  "code": "AE",
+  "name": "United Arab Emirates",
+  "kind": "destination",
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "currency": "AED",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "Ministry of Human Resources and Emiratisation (MOHRE)",
+    "url": "https://www.mohre.gov.ae"
+   },
+   {
+    "title": "Federal Authority for Identity, Citizenship, Customs & Port Security (ICP)",
+    "url": "https://icp.gov.ae"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": true,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "Employers keeping a worker's passport is not allowed in the UAE. Confirm the current rule on the MOHRE site.",
+    "Private-sector salaries are generally paid through the Wage Protection System, which leaves a record of each payment.",
+    "The offer letter should be in a language you understand and should match the contract you sign later."
+   ],
+   "sources": [
+    {
+     "title": "MOHRE",
+     "url": "https://www.mohre.gov.ae"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visit",
+   "tourist",
+   "transit"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "ae-work",
+    "name": "Employment visa and work permit",
+    "purpose": "work",
+    "summary": "The employer gets a work permit and entry permit. After arrival the worker completes a medical test and Emirates ID biometrics, then the residence visa is issued and the contract is registered.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Signed offer letter",
+      "description": "Sign an offer letter that states salary, hours and benefits in a language you understand. Keep a copy.",
+      "who": "employer",
+      "official_url": "https://www.mohre.gov.ae",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Work permit and entry permit",
+      "description": "The employer applies for your work permit and entry permit. The permit should be for employment, not a visit.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Arrive and complete the medical test",
+      "description": "After arrival, complete the medical fitness test and Emirates ID biometrics.",
+      "who": "worker",
+      "official_url": "https://icp.gov.ae",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Residence visa and contract registration",
+      "description": "The residence visa is issued and the employment contract is registered. Compare it with your offer letter.",
+      "who": "government",
+      "official_url": "https://www.mohre.gov.ae",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Signed offer letter",
+     "Educational certificates, attested if the job needs them",
+     "Passport photos"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "ae-medical",
+      "kind": "medical",
+      "title": "Medical fitness test after arrival",
+      "description": "Part of getting the residence visa.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "ICP",
+        "url": "https://icp.gov.ae"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "ae-offer-letter",
+      "kind": "other",
+      "title": "Offer letter before the work permit",
+      "description": "The offer letter you sign should match the contract registered later.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "MOHRE",
+        "url": "https://www.mohre.gov.ae"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "MOHRE",
+      "url": "https://www.mohre.gov.ae"
+     },
+     {
+      "title": "ICP",
+      "url": "https://icp.gov.ae"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "mohre.gov.ae",
+   "icp.gov.ae",
+   "u.ae",
+   "gdrfad.gov.ae"
+  ]
+ },
+ {
+  "i18n": {
+   "ur": {
+    "name": "برطانیہ"
+   }
+  },
+  "code": "GB",
+  "name": "United Kingdom",
+  "kind": "destination",
+  "languages": [
+   "en"
+  ],
+  "currency": "GBP",
+  "status": "draft",
+  "last_verified": null,
+  "official_sources": [
+   {
+    "title": "GOV.UK visas and immigration",
+    "url": "https://www.gov.uk/browse/visas-immigration"
+   }
+  ],
+  "regulator": null,
+  "max_recruitment_fee": null,
+  "max_recruitment_fee_source": null,
+  "departure_checklist": [],
+  "arrival_checklist": [],
+  "documents": [
+   {
+    "i18n": {
+     "ur": {
+      "title": "CAS (داخلے کی تصدیق کا حوالہ)",
+      "summary": "یہ حوالہ نمبر یونیورسٹی داخلہ دینے کے بعد آپ کو دیتی ہے۔ ویزا کی درخواست کے لیے یہ ضروری ہے۔",
+      "issued_by": "آپ کی یونیورسٹی یا کالج (لائسنس یافتہ اسٹوڈنٹ اسپانسر)"
+     }
+    },
+    "id": "cas",
+    "title": "CAS (Confirmation of Acceptance for Studies)",
+    "summary": "A reference your university gives you after it accepts you. You need it to apply for the visa.",
+    "issued_by": "Your university or college (a licensed student sponsor)",
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://www.gov.uk/student-visa",
+    "sources": [
+     {
+      "title": "Student visa",
+      "url": "https://www.gov.uk/student-visa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "انگریزی کے ٹیسٹ کا نتیجہ",
+      "summary": "آپ کی انگریزی کا ثبوت۔ درکار لیول کورس پر منحصر ہے۔"
+     }
+    },
+    "id": "english-test",
+    "title": "English test result",
+    "summary": "Proof of your English. The level you need depends on the course.",
+    "issued_by": null,
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://www.gov.uk/student-visa",
+    "sources": [
+     {
+      "title": "Student visa",
+      "url": "https://www.gov.uk/student-visa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "پیسوں کا ثبوت",
+      "summary": "وہ کاغذات جو دکھائیں کہ آپ کے پاس فیس اور رہن سہن کے خرچ کے پیسے ہیں۔"
+     }
+    },
+    "id": "proof-of-funds",
+    "title": "Proof of funds",
+    "summary": "Papers that show you have the money for your fees and living costs.",
+    "issued_by": null,
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://www.gov.uk/student-visa",
+    "sources": [
+     {
+      "title": "Student visa",
+      "url": "https://www.gov.uk/student-visa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "title": "ٹی بی ٹیسٹ کا نتیجہ",
+      "summary": "ٹی بی ٹیسٹ کا نتیجہ، جو کچھ ممالک کے لیے ضروری ہے۔"
+     }
+    },
+    "id": "tb-test",
+    "title": "Tuberculosis (TB) test result",
+    "summary": "A TB test result, needed for some countries.",
+    "issued_by": null,
+    "online_or_office": null,
+    "steps": [],
+    "bring": [],
+    "typical_time": null,
+    "official_url": "https://www.gov.uk/tb-test-visa",
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "complaint_channels": [],
+  "embassy_contacts": [],
+  "labour_rules": {
+   "i18n": {},
+   "passport_retention_prohibited": null,
+   "max_weekly_hours": null,
+   "minimum_monthly_wage": null,
+   "notes": [
+    "A Skilled Worker visa needs a job with an employer licensed by the Home Office. Paying a third party for a Certificate of Sponsorship is a known scam."
+   ],
+   "sources": [
+    {
+     "title": "Skilled Worker visa",
+     "url": "https://www.gov.uk/skilled-worker-visa"
+    }
+   ],
+   "status": "draft"
+  },
+  "red_flag_visa_types": [
+   "visitor",
+   "standard visitor",
+   "tourist"
+  ],
+  "visa_routes": [
+   {
+    "i18n": {},
+    "id": "gb-skilled-worker",
+    "name": "Skilled Worker visa",
+    "purpose": "work",
+    "summary": "For a job offer from a Home Office licensed sponsor, at the required skill and salary level, with English at the required level.",
+    "steps": [
+     {
+      "i18n": {},
+      "order": 1,
+      "id": "s1",
+      "title": "Job offer from a licensed sponsor",
+      "description": "Check the employer is on the official register of licensed sponsors.",
+      "who": "employer",
+      "official_url": "https://www.gov.uk/skilled-worker-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 2,
+      "id": "s2",
+      "title": "Certificate of Sponsorship",
+      "description": "The employer assigns you a certificate with a reference number.",
+      "who": "employer",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 3,
+      "id": "s3",
+      "title": "Prove your English",
+      "description": "Through an approved Secure English Language Test or another accepted way.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {},
+      "order": 4,
+      "id": "s4",
+      "title": "Apply online and give biometrics",
+      "description": "Pay the fee and the healthcare surcharge.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/skilled-worker-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "Certificate of Sponsorship reference",
+     "English test result",
+     "Tuberculosis test result if required for your country"
+    ],
+    "document_ids": [],
+    "fees": [],
+    "interview_topics": [],
+    "requirements": [
+     {
+      "i18n": {},
+      "id": "gb-sw-english",
+      "kind": "language_test",
+      "title": "English at the required level",
+      "description": "The required level is set by UK Visas and Immigration; check the current level on gov.uk before booking a test.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Knowledge of English",
+        "url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     },
+     {
+      "i18n": {},
+      "id": "gb-sw-sponsor",
+      "kind": "other",
+      "title": "Job with a licensed sponsor",
+      "description": "The employer must hold a sponsor licence.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Skilled Worker visa",
+        "url": "https://www.gov.uk/skilled-worker-visa"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Skilled Worker visa",
+      "url": "https://www.gov.uk/skilled-worker-visa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   },
+   {
+    "i18n": {
+     "ur": {
+      "name": "اسٹوڈنٹ ویزا",
+      "summary": "لائسنس یافتہ اسٹوڈنٹ اسپانسر کے کورس کے لیے۔ اس میں CAS، انگریزی کا ثبوت، اور فیس اور رہن سہن کے خرچ کے پیسے درکار ہیں۔",
+      "documents": [
+       "پاسپورٹ",
+       "CAS کا حوالہ نمبر",
+       "انگریزی کا ثبوت",
+       "پیسوں کا ثبوت",
+       "ٹی بی ٹیسٹ کا نتیجہ، اگر آپ کے ملک کے لیے ضروری ہو"
+      ],
+      "interview_topics": [
+       "آپ نے یہ کورس اور یہ یونیورسٹی کیوں چنی",
+       "آپ اپنی فیس اور رہن سہن کا خرچ کیسے ادا کریں گے",
+       "آپ نے پہلے کیا پڑھا اور یہ کورس اس سے کیسے جڑتا ہے",
+       "کورس کے بعد آپ کا کیا ارادہ ہے"
+      ]
+     }
+    },
+    "id": "gb-student",
+    "name": "Student visa",
+    "purpose": "study",
+    "summary": "For a course with a licensed student sponsor; needs a Confirmation of Acceptance for Studies, English and money for fees and living costs.",
+    "steps": [
+     {
+      "i18n": {
+       "ur": {
+        "title": "غیر مشروط آفر حاصل کریں",
+        "description": "ایسی یونیورسٹی یا کالج سے جو لائسنس یافتہ اسٹوڈنٹ اسپانسر ہو۔"
+       }
+      },
+      "order": 1,
+      "id": "offer",
+      "title": "Get an unconditional offer",
+      "description": "From a university or college that is a licensed student sponsor.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/student-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "یونیورسٹی آپ کو CAS بھیجتی ہے",
+        "description": "داخلہ دینے کے بعد یونیورسٹی آپ کو CAS کا حوالہ نمبر دیتی ہے۔ درخواست کے لیے یہ ضروری ہے۔"
+       }
+      },
+      "order": 2,
+      "id": "cas",
+      "title": "Your university sends your CAS",
+      "description": "After it accepts you, the university gives you a Confirmation of Acceptance for Studies (CAS) reference. You need it to apply.",
+      "who": "university",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "انگریزی کا ثبوت دیں",
+        "description": "درکار لیول کورس پر منحصر ہے۔ سرکاری صفحہ دیکھیں اور اپنی یونیورسٹی سے پوچھیں۔"
+       }
+      },
+      "order": 3,
+      "id": "english",
+      "title": "Prove your English",
+      "description": "The level depends on the course. Check the official page and ask your university.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/student-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "پیسوں کا ثبوت دیں",
+        "description": "فیس اور رہن سہن کے خرچ کے پیسے درکار ہیں، جیسا سرکاری صفحے پر لکھا ہے۔"
+       }
+      },
+      "order": 4,
+      "id": "funds",
+      "title": "Show you have the money",
+      "description": "You need money for your fees and living costs, as set out on the official page.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/student-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "ٹی بی ٹیسٹ کروائیں، اگر آپ کے ملک کے لیے ضروری ہو",
+        "description": "کچھ ممالک کے لیے ٹی بی ٹیسٹ کا نتیجہ ضروری ہے۔ اپنے ملک کے لیے سرکاری صفحہ دیکھیں۔"
+       }
+      },
+      "order": 5,
+      "id": "tb-test",
+      "title": "Take a TB test, if your country needs one",
+      "description": "A tuberculosis test result is needed for some countries. Check the official page for yours.",
+      "who": "worker",
+      "official_url": null,
+      "typical_duration": null,
+      "stage": "visa"
+     },
+     {
+      "i18n": {
+       "ur": {
+        "title": "آن لائن درخواست دیں",
+        "description": "فیس اور ہیلتھ کیئر سرچارج ادا کریں، پھر بائیومیٹرکس دیں۔"
+       }
+      },
+      "order": 6,
+      "id": "apply",
+      "title": "Apply online",
+      "description": "Pay the fee and healthcare surcharge, then give biometrics.",
+      "who": "worker",
+      "official_url": "https://www.gov.uk/student-visa",
+      "typical_duration": null,
+      "stage": "visa"
+     }
+    ],
+    "documents": [
+     "Passport",
+     "CAS reference",
+     "English evidence",
+     "Proof of funds",
+     "Tuberculosis test result if required for your country"
+    ],
+    "document_ids": [
+     "passport",
+     "cas",
+     "english-test",
+     "proof-of-funds",
+     "tb-test"
+    ],
+    "fees": [
+     {
+      "i18n": {
+       "ur": {
+        "item": "ویزا درخواست کی فیس"
+       }
+      },
+      "id": "visa-application",
+      "item": "Visa application fee",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "ہیلتھ کیئر سرچارج"
+       }
+      },
+      "id": "healthcare-surcharge",
+      "item": "Healthcare surcharge",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "انگریزی کا ٹیسٹ"
+       }
+      },
+      "id": "english-test",
+      "item": "English test",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     },
+     {
+      "i18n": {
+       "ur": {
+        "item": "ٹی بی ٹیسٹ، اگر آپ کے ملک کے لیے ضروری ہو"
+       }
+      },
+      "id": "tb-test",
+      "item": "TB test, if your country needs one",
+      "amount": null,
+      "currency": null,
+      "source": null,
+      "last_verified": null,
+      "paid_by": null,
+      "origins": [],
+      "note": null
+     }
+    ],
+    "interview_topics": [
+     "Why you chose this course and this university",
+     "How you will pay your fees and living costs",
+     "What you studied before and how this course follows from it",
+     "What you plan to do after the course"
+    ],
+    "requirements": [
+     {
+      "i18n": {
+       "ur": {
+        "title": "مطلوبہ لیول کی انگریزی",
+        "description": "لیول کورس پر منحصر ہے؛ gov.uk اور اپنی یونیورسٹی سے معلوم کریں۔"
+       }
+      },
+      "id": "gb-student-english",
+      "kind": "language_test",
+      "title": "English at the required level",
+      "description": "The level depends on the course; check gov.uk and your university.",
+      "rule": null,
+      "sources": [
+       {
+        "title": "Student visa",
+        "url": "https://www.gov.uk/student-visa"
+       }
+      ],
+      "status": "draft",
+      "last_verified": null
+     }
+    ],
+    "sources": [
+     {
+      "title": "Student visa",
+      "url": "https://www.gov.uk/student-visa"
+     }
+    ],
+    "status": "draft",
+    "last_verified": null
+   }
+  ],
+  "ladder_days": [
+   0,
+   7,
+   14
+  ],
+  "official_domains": [
+   "gov.uk"
+  ]
+ }
+]

@@ -1,0 +1,55 @@
+.page {
+  display: grid;
+  gap: var(--s5);
+}
+
+.now {
+  margin: 0;
+  font-weight: var(--w-strong);
+}
+
+.note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.problem {
+  margin: 0;
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.preview {
+  display: grid;
+  gap: var(--s3);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.preview p {
+  margin: 0;
+}
+
+.preview > :global(*) {
+  max-inline-size: 100%;
+}
+
+.sample {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  font-size: var(--fs-small);
+}
+
+.sample code {
+  font-family: var(--font-mono);
+}

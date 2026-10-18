@@ -1,0 +1,125 @@
+/* clip-path (not overflow) clips at the border edge, so the notch circles cut through the border too. */
+.pass {
+  position: relative;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  clip-path: inset(0 round var(--radius));
+}
+
+.top {
+  display: grid;
+  gap: var(--s2);
+  padding-block: var(--s4) var(--s3);
+  padding-inline: var(--s4);
+}
+
+.route {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(48px, 0.4fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--s2);
+}
+
+.place {
+  display: grid;
+  gap: 2px;
+  max-inline-size: none;
+}
+
+.end {
+  text-align: end;
+}
+
+.placeLabel {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.placeName {
+  font-size: var(--fs-h2);
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+.flight {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+  /* Sits level with the first line of the country names, under the From and To labels. */
+  margin-block-start: calc(var(--fs-small) * var(--lh-body) + 2px);
+  block-size: calc(var(--fs-h2) * var(--lh-title));
+  color: var(--green);
+}
+
+.dots {
+  flex: 1;
+  border-block-start: 3px dotted var(--rule-strong);
+}
+
+/* The plane icon points up; turn it to fly towards the destination, in either reading direction. */
+.plane {
+  flex: none;
+  transform: rotate(90deg);
+}
+[dir="rtl"] .plane {
+  transform: rotate(-90deg);
+}
+
+.routeName {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.tear {
+  position: relative;
+  border-block-start: 2px dashed var(--rule-strong);
+  margin-inline: var(--s4);
+}
+
+.tear::before,
+.tear::after {
+  content: "";
+  position: absolute;
+  inset-block-start: -12px;
+  inline-size: 22px;
+  block-size: 22px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--paper);
+}
+.tear::before {
+  inset-inline-start: calc(-1 * var(--s4) - 12px);
+}
+.tear::after {
+  inset-inline-end: calc(-1 * var(--s4) - 12px);
+}
+
+.step {
+  display: grid;
+  gap: var(--s2);
+  padding-block: var(--s4);
+  padding-inline: var(--s4);
+}
+
+.kicker {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s3);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.action {
+  margin-block-start: var(--s3);
+}

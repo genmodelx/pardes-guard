@@ -1,0 +1,269 @@
+# Pakistan origin pack.
+# STATUS: draft. Every line must be checked against the linked official page before a public launch.
+#
+# How to verify an item: read the official page, fix the English (and the Urdu under i18n.ur beside
+# it), add the page under `sources`, set `last_verified: YYYY-MM-DD` and `status: verified`.
+# Never fill a fee, office, phone number, link or rule from memory. An empty field makes the app say
+# "not added yet", which is safe. A wrong one can cost a worker their savings.
+# Lines marked TODO(source) are waiting for someone to read the official page.
+code: PK
+name: Pakistan
+kind: origin
+languages: [ur, en, pa, ps, sd]
+currency: PKR
+status: draft
+last_verified: null
+regulator: Bureau of Emigration & Overseas Employment (Ministry of Overseas Pakistanis & HRD)
+i18n:
+  ur:
+    name: پاکستان
+    regulator: بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ (وزارت سمندر پار پاکستانیز و ترقی انسانی وسائل)
+official_sources:
+  - title: Bureau of Emigration & Overseas Employment
+    url: https://beoe.gov.pk
+  - title: Overseas Pakistanis Foundation
+    url: https://opf.org.pk
+  - title: Overseas Employment Corporation (government recruiter, incl. Korea EPS)
+    url: https://www.oec.gov.pk
+# A link is only accepted when its domain is on one of these lists (see app/packs/__init__.py).
+# Add a domain here only after checking it is the real official site.
+official_domains: [beoe.gov.pk, opf.org.pk, oec.gov.pk, dgip.gov.pk, nadra.gov.pk, hec.gov.pk, mofa.gov.pk, ibcc.edu.pk]
+# Leave null until the current figure is copied from the official source. The rules engine then says
+# "verify the official fee" instead of guessing. TODO(source): the legal maximum a licensed promoter may charge.
+max_recruitment_fee: null
+max_recruitment_fee_source: null
+
+# One guide per paper: who issues it, where, what to bring, the steps, how long, the official link.
+# The title, the issuing body and (where there is one) the official link are filled in; the links were
+# opened on 2026-10-16 and point to the issuer's own site. Everything else is TODO(source).
+documents:
+  - id: passport
+    title: Passport
+    summary: The travel booklet you need to leave the country and enter another.
+    issued_by: Directorate General of Immigration and Passports
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://dgip.gov.pk/eServices/online-passport.php # link only, from dgip.gov.pk, the Directorate General of Immigration & Passports' own site (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: پاسپورٹ
+        summary: وہ سفری کتابچہ جس کے بغیر آپ ملک سے باہر جا کر دوسرے ملک میں داخل نہیں ہو سکتے۔
+        issued_by: ڈائریکٹوریٹ جنرل آف امیگریشن اینڈ پاسپورٹس
+  - id: cnic
+    title: CNIC (national identity card)
+    summary: Your national identity card.
+    issued_by: NADRA
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://id.nadra.gov.pk/ # link only, from NADRA's Pak Identity portal, named for CNIC on mofa.gov.pk/services/dar-es-salam-nadra-services (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: شناختی کارڈ (CNIC)
+        summary: آپ کا قومی شناختی کارڈ۔
+        issued_by: نادرا (NADRA)
+  - id: frc
+    title: FRC (Family Registration Certificate)
+    summary: A certificate that lists the members of your family.
+    issued_by: NADRA
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://id.nadra.gov.pk/ # link only, from NADRA's Pak Identity portal, named for FRC on mofa.gov.pk/poc (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: فیملی رجسٹریشن سرٹیفکیٹ (FRC)
+        summary: وہ سرٹیفکیٹ جس میں آپ کے خاندان کے افراد درج ہوتے ہیں۔
+        issued_by: نادرا (NADRA)
+  - id: police-certificate
+    title: Police character certificate
+    summary: A certificate from the police about your record.
+    issued_by: null # TODO(source): which office issues it
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: null # TODO(source): issued by the police of each province or district; no single official link
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: پولیس کریکٹر سرٹیفکیٹ
+        summary: پولیس کی طرف سے آپ کے ریکارڈ کا سرٹیفکیٹ۔
+  - id: degree-attestation-hec
+    title: Degree attestation (HEC)
+    summary: An official stamp on your degree that says the degree is genuine.
+    issued_by: HEC
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://www.hec.gov.pk/english/services/students/DAS/Pages/Degree-Attestation.aspx # link only, from HEC's degree attestation page on hec.gov.pk (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: ڈگری کی تصدیق (HEC)
+        summary: ڈگری پر لگنے والی سرکاری مہر جو بتاتی ہے کہ ڈگری اصلی ہے۔
+        issued_by: ایچ ای سی (HEC)
+  - id: mofa-attestation
+    title: MOFA attestation
+    summary: An official stamp from the foreign ministry on a certificate, so it can be used abroad.
+    issued_by: MOFA
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://apostille.mofa.gov.pk/ # link only, from the Ministry of Foreign Affairs' attestation and apostille portal on mofa.gov.pk (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: وزارت خارجہ کی تصدیق (MOFA)
+        summary: سرٹیفکیٹ پر وزارت خارجہ کی سرکاری مہر، تاکہ وہ باہر استعمال ہو سکے۔
+        issued_by: وزارت خارجہ (MOFA)
+  - id: ibcc-equivalence
+    title: IBCC equivalence
+    summary: A certificate that says what your school certificate is equal to.
+    issued_by: IBCC
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://ibcc.edu.pk/ # link only, from IBCC's own site, with its equivalence and attestation sections (opened 2026-10-16); the content is still draft
+    sources: []
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: آئی بی سی سی کی مساوات (IBCC equivalence)
+        summary: وہ سرٹیفکیٹ جو بتاتا ہے کہ آپ کی اسکول کی سند کس کے برابر ہے۔
+        issued_by: آئی بی سی سی (IBCC)
+  - id: gulf-medical
+    title: Gulf medical test (Wafid / GAMCA)
+    summary: The medical exam for a Gulf work visa. You book it yourself at an approved centre through Wafid. Never pay an agent extra to "pass" a medical.
+    issued_by: An approved medical centre, booked through Wafid
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://wafid.com
+    sources:
+      - title: Wafid (GCC-approved medical examination booking)
+        url: https://wafid.com
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: خلیج کا میڈیکل ٹیسٹ (Wafid / GAMCA)
+        summary: خلیج کے ورک ویزے کا میڈیکل ٹیسٹ۔ آپ اسے خود Wafid کے ذریعے منظور شدہ سینٹر پر بک کرتے ہیں۔ میڈیکل «پاس» کروانے کے لیے ایجنٹ کو کبھی الگ پیسے نہ دیں۔
+        issued_by: منظور شدہ میڈیکل سینٹر، جس کی بکنگ Wafid سے ہوتی ہے
+  - id: protector-registration
+    title: Protector registration
+    summary: Workers going abroad for a job are registered at a Protector of Emigrants office before they leave.
+    issued_by: Protector of Emigrants office (Bureau of Emigration & Overseas Employment)
+    online_or_office: null # TODO(source)
+    steps: [] # TODO(source)
+    bring: [] # TODO(source)
+    typical_time: null # TODO(source)
+    official_url: https://beoe.gov.pk
+    sources:
+      - title: Bureau of Emigration & Overseas Employment
+        url: https://beoe.gov.pk
+    status: draft
+    last_verified: null
+    i18n:
+      ur:
+        title: پروٹیکٹر رجسٹریشن
+        summary: باہر نوکری پر جانے والے مزدوروں کا اندراج روانگی سے پہلے پروٹیکٹر آف امیگرنٹس کے دفتر میں ہوتا ہے۔
+        issued_by: پروٹیکٹر آف امیگرنٹس کا دفتر (بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ)
+
+# `purposes` says who an item is for. These steps are the emigration process for people going abroad
+# for a job; they are not shown to students. TODO(source): confirm which apply to other visa types.
+departure_checklist:
+  - id: licensed-recruiter
+    title: Use only a licensed Overseas Employment Promoter
+    description: Check the promoter's licence on the Bureau's website before paying anything, and ask for a written receipt for every payment.
+    official_url: https://beoe.gov.pk
+    purposes: [work, seasonal]
+    i18n:
+      ur:
+        title: صرف لائسنس یافتہ اوورسیز ایمپلائمنٹ پروموٹر کے ذریعے جائیں
+        description: کوئی بھی پیسہ دینے سے پہلے بیورو کی ویب سائٹ پر پروموٹر کا لائسنس چیک کریں، اور ہر ادائیگی کی تحریری رسید مانگیں۔
+  - id: written-contract
+    title: Get a written contract you understand
+    description: Read the salary, hours, accommodation, food, medical cover and return ticket terms before you sign. Ask for a copy.
+    purposes: [work, seasonal]
+    i18n:
+      ur:
+        title: ایسا تحریری کنٹریکٹ لیں جو آپ کو سمجھ آئے
+        description: دستخط سے پہلے تنخواہ، کام کے گھنٹے، رہائش، کھانا، علاج اور واپسی کے ٹکٹ کی شرائط پڑھ لیں۔ ایک کاپی مانگیں۔
+  - id: protector-registration
+    title: Register with the Protector of Emigrants
+    description: Emigrants are processed at a Protector of Emigrants office before departure. Do not travel for work on a visit visa.
+    official_url: https://beoe.gov.pk
+    document_id: protector-registration
+    purposes: [work, seasonal]
+    i18n:
+      ur:
+        title: پروٹیکٹر آف امیگرنٹس کے پاس اندراج کروائیں
+        description: باہر جانے والوں کا اندراج روانگی سے پہلے پروٹیکٹر آف امیگرنٹس کے دفتر میں ہوتا ہے۔ وزٹ ویزے پر کام کے لیے سفر نہ کریں۔
+  - id: emigrant-insurance
+    title: Emigrant insurance
+    description: Insurance through the State Life Emigrants Insurance Fund is part of the Bureau's emigration process.
+    official_url: https://beoe.gov.pk
+    purposes: [work, seasonal]
+    i18n:
+      ur:
+        title: امیگرنٹ انشورنس
+        description: اسٹیٹ لائف امیگرنٹس انشورنس فنڈ کی انشورنس بیورو کے امیگریشن کے عمل کا حصہ ہے۔
+  - id: briefing
+    title: Pre-departure briefing
+    description: Attend the briefing; it covers your rights and who to contact abroad.
+    official_url: https://beoe.gov.pk
+    purposes: [work, seasonal]
+    i18n:
+      ur:
+        title: روانگی سے پہلے کی بریفنگ
+        description: بریفنگ میں ضرور جائیں۔ اس میں آپ کے حقوق اور یہ بتایا جاتا ہے کہ باہر کس سے رابطہ کرنا ہے۔
+  - id: family-copies
+    title: Leave copies with your family
+    description: Keep copies of your passport, visa, contract and receipts in the Pardes Guard vault and share them with a family member.
+    i18n:
+      ur:
+        title: کاپیاں اپنے گھر والوں کے پاس چھوڑیں
+        description: اپنے پاسپورٹ، ویزے، کنٹریکٹ اور رسیدوں کی کاپیاں پردیس گارڈ کی تجوری میں رکھیں اور گھر کے کسی فرد سے شیئر کریں۔
+complaint_channels:
+  - name: Bureau of Emigration & Overseas Employment (complaints against promoters)
+    url: https://beoe.gov.pk
+    i18n:
+      ur:
+        name: بیورو آف امیگریشن اینڈ اوورسیز ایمپلائمنٹ (پروموٹرز کے خلاف شکایات)
+  - name: Overseas Pakistanis Foundation
+    url: https://opf.org.pk
+    i18n:
+      ur:
+        name: اوورسیز پاکستانیز فاؤنڈیشن
+  - name: National Cyber Crime Investigation Agency (fake job adverts and online recruitment fraud)
+    description: Report fake job adverts and online recruitment scams.
+    i18n:
+      ur:
+        name: نیشنل سائبر کرائم انویسٹی گیشن ایجنسی (جعلی نوکریوں کے اشتہار اور آن لائن بھرتی کا فراڈ)
+        description: جعلی نوکریوں کے اشتہار اور آن لائن بھرتی کے فراڈ کی رپورٹ کریں۔
+ladder_days: [0, 7, 14]

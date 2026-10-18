@@ -1,0 +1,49 @@
+.severity,
+.verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  min-block-size: 28px;
+  padding-inline: var(--s2);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  line-height: var(--lh-title);
+  white-space: nowrap;
+}
+
+:lang(ur) .severity,
+:lang(ur) .verdict,
+:lang(pa) .severity,
+:lang(pa) .verdict {
+  padding-block: 4px 0;
+}
+
+.high,
+.red {
+  background: var(--red-tint);
+  color: var(--red);
+}
+
+.medium,
+.amber {
+  background: var(--amber-tint);
+  color: var(--amber-ink);
+}
+
+.low,
+.info {
+  background: var(--green-tint);
+  color: var(--green);
+}
+
+.green {
+  background: var(--ok-tint);
+  color: var(--ok);
+}
+
+/* The stamp word is a stamp's word: capitals, as on the stamp. */
+.verdict span {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

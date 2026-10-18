@@ -1,0 +1,24 @@
+# Runtime
+fastapi==0.141.1
+uvicorn[standard]>=0.30
+pydantic==2.13.5
+pydantic-settings>=2.4
+python-multipart>=0.0.9
+pyyaml>=6.0
+rapidfuzz>=3.9
+pillow>=10.4
+httpx>=0.27
+
+# Google AI and agents (versions verified when this project was generated)
+google-genai==2.30.0
+google-adk[a2a]==2.11.0
+
+# Google Cloud (used when the matching backend is switched on in settings)
+google-cloud-firestore>=2.16
+google-cloud-storage>=2.18
+google-cloud-kms>=3.0
+google-cloud-dlp>=3.20
+google-cloud-spanner>=3.47
+firebase-admin>=6.5
+google-auth>=2.30
+

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+backend/.env
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env.production
+frontend/next-env.d.ts
+# Written by `next dev` when it detects a coding agent; not part of the project.
+frontend/AGENTS.md
+*.tsbuildinfo
+
+# Firebase
+.firebase/
+.firebaserc
+
+*.log
+
+# Screenshots and test output
+frontend/.shots/
+frontend/test-results/
+frontend/playwright-report/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Private credentials
+*service-account*.json
+*serviceAccount*.json

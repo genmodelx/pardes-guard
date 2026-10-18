@@ -1,0 +1,22 @@
+.panel {
+  display: grid;
+  gap: var(--s3);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.panel > * {
+  max-inline-size: 100%;
+}
+
+.danger {
+  border-color: var(--red);
+  border-inline-start-width: 5px;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}

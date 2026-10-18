@@ -1,0 +1,144 @@
+# Canada destination pack. STATUS: draft, verify before launch.
+code: CA
+name: Canada
+kind: destination
+languages: [en, fr]
+currency: CAD
+status: draft
+last_verified: null
+official_sources:
+  - title: Immigration, Refugees and Citizenship Canada
+    url: https://www.canada.ca/en/immigration-refugees-citizenship.html
+official_domains: [canada.ca, cic.gc.ca]
+red_flag_visa_types: [visitor, tourist, temporary resident visa]
+labour_rules:
+  status: draft
+  notes:
+    - Legitimate Canadian employers and immigration programmes do not ask you to pay for a job offer. Fees for "guaranteed" job offers are a known scam.
+  sources:
+    - title: IRCC
+      url: https://www.canada.ca/en/immigration-refugees-citizenship.html
+visa_routes:
+  - id: ca-express-entry-fsw
+    name: Express Entry, Federal Skilled Worker
+    purpose: skilled_migration
+    status: draft
+    last_verified: null
+    summary: Permanent residence for skilled workers, ranked by points. You need an approved language test, education, skilled work experience and, without a job offer, proof of funds.
+    sources:
+      - title: Express Entry
+        url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+      - title: Express Entry language requirements
+        url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html
+    steps:
+      - order: 1
+        title: Take an approved language test
+        description: IELTS General Training, CELPIP-General, PTE Core, or a French test. Results must be recent.
+        who: worker
+        official_url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html
+      - order: 2
+        title: Get an educational credential assessment
+        description: Foreign degrees need an assessment from a designated organisation.
+        who: worker
+      - order: 3
+        title: Create an Express Entry profile
+        description: You get a points score and enter the pool.
+        who: worker
+        official_url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+      - order: 4
+        title: Invitation to apply
+        description: If your score is high enough in a draw, you are invited to apply for permanent residence.
+        who: government
+      - order: 5
+        title: Submit the application
+        description: Upload documents, medical exam and police certificates within the deadline.
+        who: worker
+    documents:
+      - Passport
+      - Language test results
+      - Educational credential assessment
+      - Proof of work experience
+      - Proof of funds, unless you have a valid job offer
+      - Police certificates and medical exam, when asked
+    requirements:
+      - id: ca-fsw-language
+        kind: language_test
+        title: Language at CLB 7 in all four abilities
+        description: For IELTS General Training that is 6.0 in each of listening, reading, writing and speaking; for CELPIP-General, 7 in each.
+        rule:
+          type: language_any_of
+          options:
+            - test: IELTS_GT
+              min_each: {listening: 6.0, reading: 6.0, writing: 6.0, speaking: 6.0}
+            - test: CELPIP_G
+              min_each: {listening: 7, reading: 7, writing: 7, speaking: 7}
+            - test: PTE_CORE
+        status: draft
+        sources:
+          - title: Express Entry language requirements
+            url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html
+      - id: ca-fsw-experience
+        kind: experience
+        title: At least 1 year of skilled work experience
+        description: Continuous paid skilled work in the last 10 years.
+        rule: {type: range, field: experience_years, min: 1}
+        status: draft
+        sources:
+          - title: Express Entry
+            url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+      - id: ca-fsw-education
+        kind: education
+        title: Completed secondary or post-secondary education
+        description: Foreign education needs an educational credential assessment.
+        rule: {type: min_level, field: education_level, min: secondary, order: [none, primary, secondary, higher_secondary, diploma, bachelor, master, phd]}
+        status: draft
+        sources:
+          - title: Express Entry
+            url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+      - id: ca-fsw-funds
+        kind: financial
+        title: Proof of settlement funds
+        description: Needed unless you have a valid job offer; the amount depends on family size and is updated regularly.
+        status: draft
+        sources:
+          - title: Express Entry
+            url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+  - id: ca-study
+    name: Study permit
+    purpose: study
+    status: draft
+    last_verified: null
+    summary: For students accepted by a designated learning institution. Most applicants also need a provincial attestation letter and proof of funds.
+    sources:
+      - title: Study permit
+        url: https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html
+    steps:
+      - order: 1
+        title: Get an acceptance letter
+        description: From a designated learning institution.
+        who: worker
+      - order: 2
+        title: Get a provincial or territorial attestation letter
+        description: Most study permit applicants need one; check if you are exempt.
+        who: worker
+        official_url: https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html
+      - order: 3
+        title: Apply online
+        description: With proof of funds, biometrics and any medical exam asked for.
+        who: worker
+        official_url: https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html
+    documents:
+      - Passport
+      - Acceptance letter
+      - Provincial or territorial attestation letter
+      - Proof of funds
+    requirements:
+      - id: ca-study-language
+        kind: language_test
+        title: English or French test, as your institution requires
+        description: The minimum score is set by your institution and programme.
+        status: draft
+        sources:
+          - title: Study permit
+            url: https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html
+ladder_days: [0, 7, 14]

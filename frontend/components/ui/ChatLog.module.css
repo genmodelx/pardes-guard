@@ -1,0 +1,72 @@
+.log {
+  display: grid;
+  gap: var(--s3);
+  padding: 0;
+  list-style: none;
+}
+
+.line {
+  display: grid;
+  gap: var(--s1);
+  max-inline-size: 88%;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  line-height: var(--lh-body);
+}
+
+/* The person's words sit at the end of the line; the app's at the start. Mirrors in Urdu. */
+.you {
+  justify-self: end;
+  background: var(--green-tint);
+  border-end-end-radius: var(--radius-sm);
+}
+
+.other {
+  justify-self: start;
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-end-start-radius: var(--radius-sm);
+}
+
+.who {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  font-weight: var(--w-strong);
+}
+
+.text {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.links {
+  display: grid;
+  gap: var(--s2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.busy .text {
+  color: var(--ink-soft);
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .busy .text {
+    animation: none;
+  }
+}

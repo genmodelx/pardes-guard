@@ -1,0 +1,51 @@
+# CI for the API: test, build, push, and roll out a new revision.
+# Cloud Run keeps the env vars and secrets set by infra/deploy.sh; this only swaps the image.
+#
+#   gcloud builds submit --config infra/cloudbuild.yaml .
+# or attach it to a Cloud Build trigger on the main branch.
+#
+# The build's service account needs Cloud Run Admin (roles/run.admin), Artifact Registry Writer, and
+# Service Account User (roles/iam.serviceAccountUser) on pardes-api@PROJECT.iam.gserviceaccount.com to
+# roll out the new revision. Check which account your builds run as in Cloud Build settings.
+
+substitutions:
+  _REGION: asia-south1
+  _SERVICE: pardes-guard-api
+
+options:
+  dynamic_substitutions: true
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  - id: test-api
+    name: python:3.12-slim
+    entrypoint: bash
+    dir: backend
+    args: ["-c", "pip install -q -r requirements-dev.txt && python -m pytest -q"]
+
+  - id: build-web
+    name: node:22
+    entrypoint: bash
+    dir: frontend
+    args: ["-c", "npm ci && npm run typecheck && npm run build"]
+
+  - id: build-image
+    name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "${_REGION}-docker.pkg.dev/$PROJECT_ID/pardes/api:$BUILD_ID", "backend"]
+
+  - id: push-image
+    name: gcr.io/cloud-builders/docker
+    args: ["push", "${_REGION}-docker.pkg.dev/$PROJECT_ID/pardes/api:$BUILD_ID"]
+
+  - id: deploy-api
+    name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/pardes/api:$BUILD_ID
+      - --region=${_REGION}
+
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/pardes/api:$BUILD_ID

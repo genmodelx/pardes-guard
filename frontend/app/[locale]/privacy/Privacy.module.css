@@ -1,0 +1,31 @@
+.list {
+  display: grid;
+  gap: var(--s4);
+  margin: 0;
+}
+
+.part {
+  display: grid;
+  gap: var(--s2);
+  padding-block-end: var(--s4);
+  border-block-end: 1px solid var(--rule);
+}
+
+.term {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  font-size: var(--fs-h2);
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+.icon {
+  flex: none;
+  color: var(--green);
+}
+
+.desc {
+  margin: 0;
+  padding-inline-start: calc(28px + var(--s3));
+}

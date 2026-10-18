@@ -1,0 +1,252 @@
+# Saudi Arabia destination pack. STATUS: draft, verify every item before launch.
+# See the notes at the top of PK.yaml for how to verify an item and what TODO(source) means.
+code: SA
+name: Saudi Arabia
+kind: destination
+languages: [ar, en]
+currency: SAR
+status: draft
+last_verified: null
+i18n:
+  ur:
+    name: سعودی عرب
+official_sources:
+  - title: Ministry of Human Resources and Social Development
+    url: https://www.hrsd.gov.sa
+  - title: Qiwa (employment contracts and labour services)
+    url: https://qiwa.sa
+  - title: Ministry of Foreign Affairs visa platform
+    url: https://visa.mofa.gov.sa
+  - title: Wafid (GCC-approved medical examination booking)
+    url: https://wafid.com
+official_domains: [hrsd.gov.sa, qiwa.sa, mofa.gov.sa, visa.mofa.gov.sa, my.gov.sa, wafid.com]
+red_flag_visa_types: [visit, tourist, umrah, hajj, transit, family visit, business visit]
+labour_rules:
+  status: draft
+  passport_retention_prohibited: true
+  max_weekly_hours: null
+  minimum_monthly_wage: null
+  notes:
+    - Employers keeping a worker's passport is a known abuse; Saudi rules restrict it. Confirm the current rule on the Ministry site.
+    - Employment contracts are documented on the Qiwa platform; ask for your contract to be visible there.
+  sources:
+    - title: Ministry of Human Resources and Social Development
+      url: https://www.hrsd.gov.sa
+    - title: Qiwa
+      url: https://qiwa.sa
+  i18n:
+    ur:
+      notes:
+        - کمپنی کا مزدور کا پاسپورٹ اپنے پاس رکھ لینا ایک جانا پہچانا ظلم ہے؛ سعودی قانون اس پر پابندی لگاتا ہے۔ موجودہ قانون وزارت کی ویب سائٹ پر دیکھیں۔
+        - ملازمت کے کنٹریکٹ Qiwa پلیٹ فارم پر درج ہوتے ہیں؛ کہیں کہ آپ کا کنٹریکٹ وہاں نظر آئے۔
+
+# What to do in the first week. Taken from the last step of the route and the labour notes above.
+arrival_checklist:
+  - id: iqama
+    title: Get your residence permit (iqama)
+    description: Your employer arranges your residence permit (iqama).
+    who: employer
+    official_url: https://qiwa.sa
+    i18n:
+      ur:
+        title: اقامہ بنوائیں
+        description: آپ کا اقامہ (رہائشی اجازت نامہ) کمپنی بنواتی ہے۔
+  - id: contract-qiwa
+    title: See your contract on Qiwa
+    description: Ask to see your contract on Qiwa. Employment contracts are documented there.
+    official_url: https://qiwa.sa
+    i18n:
+      ur:
+        title: اپنا کنٹریکٹ Qiwa پر دیکھیں
+        description: اپنا کنٹریکٹ Qiwa پر دکھانے کو کہیں۔ ملازمت کے کنٹریکٹ وہیں درج ہوتے ہیں۔
+  - id: keep-passport
+    title: Keep your own passport
+    description: Keep your passport yourself. Employers keeping a worker's passport is a known abuse; confirm the current rule on the Ministry site.
+    official_url: https://www.hrsd.gov.sa
+    i18n:
+      ur:
+        title: اپنا پاسپورٹ اپنے پاس رکھیں
+        description: اپنا پاسپورٹ خود رکھیں۔ کمپنی کا مزدور کا پاسپورٹ رکھ لینا ایک جانا پہچانا ظلم ہے؛ موجودہ قانون وزارت کی ویب سائٹ پر دیکھیں۔
+
+visa_routes:
+  - id: sa-work
+    name: Employment visa
+    purpose: work
+    status: draft
+    last_verified: null
+    summary: A Saudi employer sponsors the visa. The worker goes through skill checks where required, a medical exam, visa stamping and departure formalities at home.
+    i18n:
+      ur:
+        name: ورک ویزا (ملازمت کا ویزا)
+        summary: ویزا سعودی کمپنی اسپانسر کرتی ہے۔ مزدور کو جہاں ضروری ہو ہنر کی جانچ، میڈیکل ٹیسٹ، ویزا اسٹیمپنگ اور اپنے ملک میں روانگی کی کارروائی سے گزرنا ہوتا ہے۔
+        documents:
+          - پاسپورٹ جس کی مدت ویزے کے لیے کافی ہو
+          - دستخط شدہ آفر لیٹر یا کنٹریکٹ
+          - منظور شدہ سینٹر کی میڈیکل رپورٹ
+          - ہنر کی تصدیق کا نتیجہ، اگر آپ کے پیشے میں ضروری ہو
+          - تعلیمی یا ہنر کے سرٹیفکیٹ، اگر نوکری میں ضروری ہوں
+    sources:
+      - title: Qiwa
+        url: https://qiwa.sa
+      - title: Ministry of Foreign Affairs visa platform
+        url: https://visa.mofa.gov.sa
+    steps:
+      - order: 1
+        id: offer
+        title: Job offer through a licensed recruiter
+        description: Get a written offer from a recruiter licensed in your home country. Check the licence in Pardes Guard before paying.
+        who: recruiter
+        i18n:
+          ur:
+            title: لائسنس یافتہ ایجنٹ کے ذریعے نوکری کی آفر
+            description: اپنے ملک کے لائسنس یافتہ ایجنٹ سے تحریری آفر لیں۔ پیسے دینے سے پہلے پردیس گارڈ میں لائسنس چیک کریں۔
+      - order: 2
+        id: employer-visa
+        title: Employer requests the work visa
+        description: The Saudi employer obtains the visa authorisation for your profession. The profession on the visa should match the job you were promised.
+        who: employer
+        i18n:
+          ur:
+            title: کمپنی ورک ویزا کی درخواست دیتی ہے
+            description: سعودی کمپنی آپ کے پیشے کے لیے ویزا کی منظوری لیتی ہے۔ ویزے پر لکھا پیشہ وہی ہونا چاہیے جس نوکری کا آپ سے وعدہ ہوا۔
+      - order: 3
+        id: skill-verification
+        title: Skill verification, if your profession needs it
+        description: Some professions need a skill verification test before the visa. Check whether yours is listed.
+        who: worker
+        official_url: https://qiwa.sa
+        i18n:
+          ur:
+            title: ہنر کی تصدیق، اگر آپ کے پیشے میں ضروری ہو
+            description: کچھ پیشوں میں ویزے سے پہلے ہنر کی تصدیق کا ٹیسٹ ضروری ہے۔ دیکھیں کہ آپ کا پیشہ فہرست میں ہے یا نہیں۔
+      - order: 4
+        id: medical
+        title: Medical examination
+        description: Book the medical exam at an approved centre through Wafid. Never pay an agent extra to "pass" a medical.
+        who: worker
+        official_url: https://wafid.com
+        i18n:
+          ur:
+            title: میڈیکل ٹیسٹ
+            description: میڈیکل ٹیسٹ منظور شدہ سینٹر پر Wafid کے ذریعے بک کریں۔ میڈیکل «پاس» کروانے کے لیے ایجنٹ کو کبھی الگ پیسے نہ دیں۔
+      - order: 5
+        id: visa-stamping
+        title: Visa stamping and checking
+        description: After stamping, check the visa details yourself on the official visa platform, especially the visa type and profession.
+        who: government
+        official_url: https://visa.mofa.gov.sa
+        i18n:
+          ur:
+            title: ویزا اسٹیمپنگ اور جانچ
+            description: اسٹیمپنگ کے بعد ویزے کی تفصیل خود سرکاری ویزا پلیٹ فارم پر چیک کریں، خاص طور پر ویزے کی قسم اور پیشہ۔
+      - order: 6
+        id: departure
+        stage: departure
+        title: Departure formalities at home
+        description: Complete your home country's emigration registration, insurance and briefing before you fly.
+        who: worker
+        i18n:
+          ur:
+            title: اپنے ملک میں روانگی کی کارروائی
+            description: جہاز پر بیٹھنے سے پہلے اپنے ملک کی امیگریشن رجسٹریشن، انشورنس اور بریفنگ مکمل کریں۔
+      - order: 7
+        id: arrival
+        stage: arrival
+        title: Residence permit and contract after arrival
+        description: Your employer arranges your residence permit (iqama). Ask to see your contract on Qiwa and keep your own passport.
+        who: employer
+        official_url: https://qiwa.sa
+        i18n:
+          ur:
+            title: پہنچنے کے بعد اقامہ اور کنٹریکٹ
+            description: آپ کا اقامہ کمپنی بنواتی ہے۔ اپنا کنٹریکٹ Qiwa پر دکھانے کو کہیں اور اپنا پاسپورٹ اپنے پاس رکھیں۔
+    documents:
+      - Passport with enough validity for the visa
+      - Signed job offer or contract
+      - Medical examination report from an approved centre
+      - Skill verification result, if your profession needs it
+      - Educational or trade certificates, if the job requires them
+    # Guides for the papers above that a person gets themselves. Looked up in the origin pack first.
+    # TODO(source): whether this route also needs a police certificate or attested certificates.
+    document_ids: [passport, gulf-medical]
+    # Costs of this route. No amounts yet: a number needs the official page it was copied from
+    # (source) and the date (last_verified), or the pack will not load. TODO(source) for each amount
+    # and for who pays it (paid_by).
+    fees:
+      - id: passport
+        item: Passport
+        origins: [PK]
+        i18n:
+          ur:
+            item: پاسپورٹ
+      - id: medical
+        item: Medical examination
+        i18n:
+          ur:
+            item: میڈیکل ٹیسٹ
+      - id: skill-test
+        item: Skill verification test, if your profession needs it
+        i18n:
+          ur:
+            item: ہنر کی تصدیق کا ٹیسٹ، اگر آپ کے پیشے میں ضروری ہو
+      - id: visa
+        item: Work visa
+        i18n:
+          ur:
+            item: ورک ویزا
+      - id: protector
+        item: Protector registration
+        origins: [PK]
+        i18n:
+          ur:
+            item: پروٹیکٹر رجسٹریشن
+      - id: insurance
+        item: Emigrant insurance
+        origins: [PK]
+        i18n:
+          ur:
+            item: امیگرنٹ انشورنس
+      - id: ticket
+        item: Air ticket
+        i18n:
+          ur:
+            item: ہوائی جہاز کا ٹکٹ
+    interview_topics: [] # TODO(source): only if this route has an interview
+    requirements:
+      - id: sa-medical
+        kind: medical
+        title: Medical examination at an approved centre
+        description: A medical exam booked through the GCC-approved system is part of the work visa process.
+        status: draft
+        sources:
+          - title: Wafid
+            url: https://wafid.com
+        i18n:
+          ur:
+            title: منظور شدہ سینٹر پر میڈیکل ٹیسٹ
+            description: خلیجی ممالک کے منظور شدہ نظام سے بک کیا گیا میڈیکل ٹیسٹ ورک ویزا کے عمل کا حصہ ہے۔
+      - id: sa-skill-verification
+        kind: skills_test
+        title: Skill verification for listed professions
+        description: Some professions require passing a skill verification test before the visa is issued. Check whether yours is on the list.
+        status: draft
+        sources:
+          - title: Qiwa
+            url: https://qiwa.sa
+        i18n:
+          ur:
+            title: فہرست میں شامل پیشوں کے لیے ہنر کی تصدیق
+            description: کچھ پیشوں میں ویزا جاری ہونے سے پہلے ہنر کی تصدیق کا ٹیسٹ پاس کرنا ضروری ہے۔ دیکھیں کہ آپ کا پیشہ فہرست میں ہے یا نہیں۔
+      - id: sa-passport
+        kind: passport
+        title: Valid passport
+        description: Your passport must stay valid long enough for the visa and residence permit. Confirm the minimum with your recruiter and the official platform.
+        # TODO(source): once the minimum is verified, add
+        #   rule: { type: range, field: passport_valid_months, min: <months> }
+        # so the document readiness scan can check it. Until then the scan says it cannot check.
+        status: draft
+        i18n:
+          ur:
+            title: کارآمد پاسپورٹ
+            description: آپ کا پاسپورٹ ویزے اور اقامے کی پوری مدت کے لیے کارآمد ہونا چاہیے۔ کم از کم مدت اپنے ایجنٹ اور سرکاری پلیٹ فارم سے معلوم کریں۔
+ladder_days: [0, 7, 14]

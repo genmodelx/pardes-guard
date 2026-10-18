@@ -1,0 +1,94 @@
+.picker {
+  display: grid;
+  gap: var(--s3);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s3);
+}
+
+.add {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: var(--s1);
+  min-block-size: 96px;
+  padding: var(--s3);
+  border: 2px dashed var(--green);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--green);
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.add:disabled {
+  border-color: var(--rule-strong);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+}
+
+.list {
+  display: grid;
+  gap: var(--s2);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 56px;
+  block-size: 72px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--green);
+  object-fit: cover;
+}
+
+.name {
+  display: grid;
+  flex: 1;
+  min-inline-size: 0;
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.name bdi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.remove {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  min-block-size: var(--tap);
+  padding-inline: var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.problem {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}

@@ -1,0 +1,22 @@
+.wrap {
+  display: grid;
+  gap: var(--s3);
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.line,
+.block {
+  border-radius: var(--radius-sm);
+  background: var(--rule);
+}
+
+.line {
+  block-size: 16px;
+}
+
+.block {
+  block-size: 96px;
+}

@@ -1,0 +1,160 @@
+.group {
+  display: grid;
+  gap: var(--s3);
+}
+
+@media (min-width: 620px) {
+  .two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tile {
+  position: relative;
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The radio stays in the page for keyboards and screen readers; the box is what people see. */
+.input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  min-block-size: 88px;
+  padding: var(--s4);
+  border: 2px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.picture {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 64px;
+  block-size: 64px;
+  border-radius: var(--radius);
+  background: var(--green-tint);
+  color: var(--green);
+}
+
+.text {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.title {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+  text-wrap: balance;
+}
+
+.description {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin-block-start: var(--s1);
+}
+
+/* The tick: empty ring until chosen, so "not chosen" also has a shape. */
+.mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 28px;
+  block-size: 28px;
+  border: 2px solid var(--rule-strong);
+  border-radius: 50%;
+  color: transparent;
+}
+
+.input:checked + .box {
+  border-color: var(--green);
+  box-shadow: inset 0 0 0 1px var(--green);
+  background: var(--green-tint);
+}
+.input:checked + .box .picture {
+  background: var(--sheet);
+}
+.input:checked + .box .mark {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--green-ink);
+}
+
+.input:focus-visible + .box {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.tile:hover .box {
+  border-color: var(--green);
+}
+
+.link .box {
+  border-width: 1px;
+  border-color: var(--rule);
+}
+.link:focus-visible {
+  border-radius: var(--radius);
+}
+
+.chevron {
+  color: var(--ink-soft);
+}
+
+/* Dense groups: short answers, two to a row on every screen. The tick sits on the corner. */
+.dense {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s3);
+}
+
+/* Tiles in one row are the same height, whatever their label wraps to. */
+.small {
+  display: grid;
+}
+.small .box {
+  gap: var(--s2);
+  min-block-size: 64px;
+  padding: var(--s3);
+}
+.small .picture {
+  inline-size: auto;
+  block-size: auto;
+  background: none;
+}
+.small .input:checked + .box .picture {
+  background: none;
+}
+.small .mark {
+  position: absolute;
+  inset-block-start: -9px;
+  inset-inline-end: -9px;
+  display: none;
+  inline-size: 26px;
+  block-size: 26px;
+}
+.small .input:checked + .box .mark {
+  display: grid;
+}

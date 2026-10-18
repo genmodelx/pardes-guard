@@ -1,0 +1,42 @@
+.list {
+  display: grid;
+  gap: var(--s1);
+  padding: var(--s2) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: var(--tap);
+  color: var(--ink-soft);
+}
+
+.step[data-state="doing"] {
+  color: var(--ink);
+  font-weight: var(--w-strong);
+}
+
+.step[data-state="done"] {
+  color: var(--ink);
+}
+
+/* The step being worked on breathes gently, so the screen does not look stuck. */
+.step[data-state="doing"] svg {
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step[data-state="doing"] svg {
+    animation: none;
+  }
+}

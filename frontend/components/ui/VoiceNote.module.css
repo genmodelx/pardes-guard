@@ -1,0 +1,66 @@
+.note {
+  display: grid;
+  gap: var(--s2);
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: var(--control);
+  padding-inline: var(--s4) var(--s2);
+  border: 2px solid var(--red);
+  border-radius: var(--radius);
+  background: var(--red-tint);
+  font-weight: var(--w-strong);
+}
+
+.live > span[role="timer"] {
+  flex: 1;
+  font-family: var(--font-latin);
+}
+
+/* A red dot that pulses while the microphone is on: a person can see at a glance that it is listening. */
+.dot {
+  inline-size: 14px;
+  block-size: 14px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+}
+
+.ready {
+  display: grid;
+  gap: var(--s2);
+  padding: var(--s3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.status {
+  font-weight: var(--w-strong);
+}
+
+.problem {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}

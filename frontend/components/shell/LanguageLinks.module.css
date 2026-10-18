@@ -1,0 +1,50 @@
+.list {
+  display: grid;
+  gap: var(--s3);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  min-block-size: 72px;
+  padding-block: var(--s2);
+  padding-inline: var(--s5);
+  border: 2px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  text-decoration: none;
+  /* The row keeps one order whatever the page direction, so the list does not jump per language. */
+  direction: ltr;
+}
+
+.link:hover,
+.link[aria-current="true"] {
+  border-color: var(--green);
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+
+.link[aria-current="true"] {
+  background: var(--green-tint);
+}
+
+/* Each name uses the phone's font for its script. Web fonts load only after a language is chosen. */
+.native {
+  font-family: var(--stack-system);
+  font-size: var(--t-h1);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.english {
+  font-family: var(--font-latin);
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+}
+
+.machine {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+}

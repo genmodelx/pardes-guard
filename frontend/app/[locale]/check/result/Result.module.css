@@ -1,0 +1,190 @@
+/* The paper that was checked, as a card, with the stamp pressed onto its lower half. */
+.card {
+  display: grid;
+  gap: var(--s2);
+  padding: var(--s4) var(--s4) 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.cardText {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  min-inline-size: 0;
+}
+
+.cardType {
+  font-size: var(--fs-h2);
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+/* A few lines of "print" under the stamp, so the card reads as a paper. No text sits on them. */
+.cardFoot {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-block: var(--s2) var(--s3);
+}
+
+.cardFoot::before {
+  content: "";
+  position: absolute;
+  inset-block: var(--s3) var(--s4);
+  inset-inline: 0;
+  background: repeating-linear-gradient(to bottom, var(--rule) 0 2px, transparent 2px 14px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.stamp {
+  position: relative;
+  margin-inline-end: var(--s2);
+}
+
+.reasons {
+  display: grid;
+  gap: var(--s1);
+  padding-inline-start: var(--s5);
+  list-style: disc;
+  font-weight: var(--w-strong);
+}
+
+.source {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.flags {
+  display: grid;
+  gap: var(--s3);
+}
+
+.flag {
+  display: grid;
+  gap: var(--s2);
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-inline-start-width: 5px;
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.flag[data-severity="high"] {
+  border-inline-start-color: var(--red);
+}
+.flag[data-severity="medium"] {
+  border-inline-start-color: var(--amber-ink);
+}
+.flag[data-severity="low"],
+.flag[data-severity="info"] {
+  border-inline-start-color: var(--green);
+}
+
+.flagHead {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+}
+
+.evidence {
+  display: grid;
+  gap: var(--s1);
+  padding: var(--s3);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  font-size: var(--fs-small);
+}
+
+.evidence ul {
+  display: grid;
+  gap: var(--s1);
+}
+
+.evidenceLabel {
+  font-size: var(--fs-small);
+  font-weight: var(--w-strong);
+}
+
+.steps {
+  display: grid;
+  gap: var(--s3);
+}
+
+.steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+}
+
+.stepIcon {
+  flex: none;
+  margin-block-start: 0.15em;
+  color: var(--green);
+}
+
+.agentName {
+  font-weight: var(--w-strong);
+}
+
+.bullets {
+  display: grid;
+  gap: var(--s1);
+  padding-inline-start: var(--s5);
+  list-style: disc;
+}
+
+.paper {
+  display: grid;
+  gap: var(--s3);
+}
+
+.quote {
+  margin: 0;
+  padding: var(--s3) var(--s4);
+  border-inline-start: 4px solid var(--rule-strong);
+  background: var(--sheet);
+}
+
+.translation {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.translationHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.translationText {
+  white-space: pre-line;
+}
+
+.more {
+  display: grid;
+  gap: var(--s3);
+}
+
+.lookup {
+  display: grid;
+  gap: var(--s2);
+}
+
+.lookup p {
+  margin: 0;
+}
+
+.lookupLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}

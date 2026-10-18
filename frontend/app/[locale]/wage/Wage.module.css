@@ -1,0 +1,26 @@
+.fields {
+  display: grid;
+  gap: var(--s4);
+}
+
+.flags {
+  display: grid;
+  gap: var(--s3);
+  padding: 0;
+  list-style: none;
+}
+
+.flag {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.flag h3,
+.flag p {
+  margin: 0;
+}

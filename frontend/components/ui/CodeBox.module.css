@@ -1,0 +1,26 @@
+.box {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.label {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.code {
+  max-inline-size: none;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.group {
+  display: inline-block;
+  margin-inline-end: 0.5em;
+}

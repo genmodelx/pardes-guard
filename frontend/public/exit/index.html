@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Clock</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        background: #f4f4f4;
+        color: #222;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        text-align: center;
+      }
+      #time {
+        font-size: 4.5rem;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+      }
+      #date {
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #121212;
+          color: #e8e8e8;
+        }
+        #date {
+          color: #a8a8a8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The plain page behind the Quick exit button on the SOS screen. It names nothing and links nowhere on purpose. -->
+    <main>
+      <div id="time"></div>
+      <div id="date"></div>
+    </main>
+    <script>
+      (function () {
+        var time = document.getElementById("time");
+        var date = document.getElementById("date");
+        function pad(n) {
+          return n < 10 ? "0" + n : "" + n;
+        }
+        function tick() {
+          var now = new Date();
+          time.textContent = pad(now.getHours()) + ":" + pad(now.getMinutes());
+          date.textContent = now.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
+        }
+        tick();
+        setInterval(tick, 10000);
+      })();
+    </script>
+  </body>
+</html>

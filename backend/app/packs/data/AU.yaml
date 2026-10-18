@@ -1,0 +1,119 @@
+# Australia destination pack. STATUS: draft, verify before launch.
+# English test thresholds changed recently, so they are manual checks until verified.
+code: AU
+name: Australia
+kind: destination
+languages: [en]
+currency: AUD
+status: draft
+last_verified: null
+official_sources:
+  - title: Department of Home Affairs, immigration and citizenship
+    url: https://immi.homeaffairs.gov.au
+official_domains: [immi.homeaffairs.gov.au, homeaffairs.gov.au]
+red_flag_visa_types: [visitor, tourist, eta]
+labour_rules:
+  status: draft
+  notes:
+    - Paying for a visa sponsorship or a job offer is not allowed in Australia's sponsored visa programmes.
+  sources:
+    - title: Department of Home Affairs
+      url: https://immi.homeaffairs.gov.au
+visa_routes:
+  - id: au-189
+    name: Skilled Independent visa (subclass 189)
+    purpose: skilled_migration
+    status: draft
+    last_verified: null
+    summary: Points-tested permanent visa. You need an occupation on the relevant list, a positive skills assessment, competent English and an invitation through SkillSelect.
+    sources:
+      - title: Skilled Independent visa (subclass 189)
+        url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189
+    steps:
+      - order: 1
+        title: Skills assessment
+        description: From the assessing authority for your occupation.
+        who: worker
+      - order: 2
+        title: English test
+        description: Meet at least competent English; higher scores give more points.
+        who: worker
+      - order: 3
+        title: Expression of interest in SkillSelect
+        description: Submit an EOI and wait for an invitation.
+        who: worker
+        official_url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189
+      - order: 4
+        title: Apply after invitation
+        description: Lodge the visa application within the deadline.
+        who: worker
+    documents:
+      - Passport
+      - Skills assessment
+      - English test result
+      - Evidence for points claimed
+    requirements:
+      - id: au-189-age
+        kind: age
+        title: Under 45 when invited
+        description: You must be under 45 at the time of invitation.
+        rule: {type: range, field: age, max: 44}
+        status: draft
+        sources:
+          - title: Skilled Independent visa (subclass 189)
+            url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189
+      - id: au-189-english
+        kind: language_test
+        title: At least competent English
+        description: Check the current accepted tests and scores on the Home Affairs page before booking.
+        status: draft
+        sources:
+          - title: Skilled Independent visa (subclass 189)
+            url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189
+      - id: au-189-skills
+        kind: skills_test
+        title: Positive skills assessment
+        description: From the assessing authority for your nominated occupation.
+        rule: {type: bool_true, field: has_skills_certificate}
+        status: draft
+        sources:
+          - title: Skilled Independent visa (subclass 189)
+            url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189
+  - id: au-student
+    name: Student visa (subclass 500)
+    purpose: study
+    status: draft
+    last_verified: null
+    summary: For full-time study at a registered course; needs a confirmation of enrolment, English, funds and health insurance.
+    sources:
+      - title: Student visa (subclass 500)
+        url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500
+    steps:
+      - order: 1
+        title: Confirmation of enrolment
+        description: From your education provider.
+        who: worker
+      - order: 2
+        title: Health insurance and funds
+        description: Arrange the required health cover and show enough money.
+        who: worker
+      - order: 3
+        title: Apply online
+        description: Through ImmiAccount.
+        who: worker
+        official_url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500
+    documents:
+      - Passport
+      - Confirmation of enrolment
+      - English test result
+      - Proof of funds and health cover
+    requirements:
+      - id: au-student-english
+        kind: language_test
+        title: English test, as required
+        description: Check the current accepted tests and scores on the Home Affairs page.
+        status: draft
+        sources:
+          - title: Student visa (subclass 500)
+            url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500
+ladder_days: [0, 7, 14]

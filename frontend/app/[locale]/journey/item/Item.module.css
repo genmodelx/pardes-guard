@@ -1,0 +1,33 @@
+.stage {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.fact {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s2);
+  color: var(--ink-soft);
+}
+
+.factIcon {
+  margin-block-start: 0.15em;
+}
+
+.saved {
+  min-block-size: 1.5em;
+  color: var(--ok);
+  font-size: var(--fs-small);
+  font-weight: var(--w-strong);
+}
+
+.note {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}

@@ -1,0 +1,7 @@
+.flag {
+  display: block;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  background: var(--sheet);
+  object-fit: cover;
+}

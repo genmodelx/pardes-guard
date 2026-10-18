@@ -1,0 +1,80 @@
+.list {
+  display: grid;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  padding-inline: var(--s4);
+}
+
+.fact {
+  display: grid;
+  gap: 2px;
+  padding-block: var(--s3);
+}
+
+.fact + .fact {
+  border-block-start: 1px solid var(--rule);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  color: var(--green);
+}
+
+.value {
+  font-weight: var(--w-strong);
+}
+
+/* Lines the answer up under its label, past the icon. */
+.indented {
+  padding-inline-start: calc(24px + var(--s2));
+}
+
+/* Dashed like the draft badge: not final. */
+.notYet {
+  color: var(--ink-soft);
+  font-weight: 400;
+  border-block-end: 2px dashed var(--rule-strong);
+}
+
+.steps {
+  display: grid;
+  gap: var(--s3);
+}
+
+.step {
+  display: flex;
+  gap: var(--s3);
+  align-items: flex-start;
+}
+
+.n {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 32px;
+  block-size: 32px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  color: var(--green);
+  font-family: var(--font-latin);
+  font-size: var(--t-small);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ticks {
+  display: grid;
+  gap: var(--s2);
+  padding-inline-start: var(--s5);
+  list-style: disc;
+}

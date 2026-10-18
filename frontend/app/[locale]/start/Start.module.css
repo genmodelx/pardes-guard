@@ -1,0 +1,34 @@
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+}
+
+.count {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+/* Three short bars: how many questions are behind you. */
+.segments {
+  display: flex;
+  gap: var(--s1);
+}
+
+.segment,
+.segmentOn {
+  inline-size: 28px;
+  block-size: 6px;
+  border-radius: 3px;
+  background: var(--rule);
+}
+
+.segmentOn {
+  background: var(--green);
+}
+
+.pick {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}

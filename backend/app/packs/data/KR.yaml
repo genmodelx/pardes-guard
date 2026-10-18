@@ -1,0 +1,80 @@
+# South Korea destination pack. STATUS: draft, verify before launch.
+code: KR
+name: South Korea
+kind: destination
+languages: [ko, en]
+currency: KRW
+status: draft
+last_verified: null
+official_sources:
+  - title: Employment Permit System (EPS)
+    url: https://www.eps.go.kr
+  - title: HRD Korea
+    url: https://www.hrdkorea.or.kr
+  - title: Overseas Employment Corporation, Pakistan (EPS sending agency)
+    url: https://www.oec.gov.pk
+official_domains: [eps.go.kr, hrdkorea.or.kr, oec.gov.pk]
+red_flag_visa_types: [tourist, short-term visit, c-3]
+labour_rules:
+  status: draft
+  notes:
+    - EPS workers are hired government-to-government; private agents promising a "guaranteed" EPS job for a fee are a known scam. Go through your country's official sending agency.
+  sources:
+    - title: Employment Permit System
+      url: https://www.eps.go.kr
+visa_routes:
+  - id: kr-eps
+    name: Employment Permit System (E-9)
+    purpose: work
+    status: draft
+    last_verified: null
+    summary: A government-to-government programme. Workers pass the EPS-TOPIK Korean test and a skills check, then join a job-seeker roster that Korean employers choose from.
+    sources:
+      - title: Employment Permit System
+        url: https://www.eps.go.kr
+    steps:
+      - order: 1
+        title: Register through your official sending agency
+        description: In Pakistan this is the Overseas Employment Corporation. Do not pay private agents for EPS.
+        who: worker
+        official_url: https://www.oec.gov.pk
+      - order: 2
+        title: Pass EPS-TOPIK
+        description: The Korean language test for EPS.
+        who: worker
+        official_url: https://www.eps.go.kr
+      - order: 3
+        title: Skills and competency check
+        description: Some sectors add a skills test.
+        who: worker
+      - order: 4
+        title: Job-seeker roster and employer selection
+        description: Korean employers pick workers from the roster and sign a standard labour contract.
+        who: employer
+      - order: 5
+        title: Visa issuance and pre-departure training
+        description: The visa is issued after the contract; complete training before departure.
+        who: government
+    documents:
+      - Passport
+      - EPS-TOPIK result
+      - Standard labour contract
+    requirements:
+      - id: kr-eps-age
+        kind: age
+        title: Age 18 to 39
+        description: EPS applicants are expected to be between 18 and 39.
+        rule: {type: range, field: age, min: 18, max: 39}
+        status: draft
+        sources:
+          - title: Employment Permit System
+            url: https://www.eps.go.kr
+      - id: kr-eps-topik
+        kind: language_test
+        title: Pass EPS-TOPIK
+        description: The pass mark is set per test round; check the current round's notice.
+        status: draft
+        sources:
+          - title: Employment Permit System
+            url: https://www.eps.go.kr
+ladder_days: [0, 7, 14]

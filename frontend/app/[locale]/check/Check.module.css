@@ -1,0 +1,151 @@
+.trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.details {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  min-block-size: var(--tap);
+  padding-inline: var(--s4);
+  color: var(--green);
+  font-weight: var(--w-strong);
+  cursor: pointer;
+}
+
+.details[open] .summary {
+  border-block-end: 1px solid var(--rule);
+}
+
+.fields {
+  display: grid;
+  gap: var(--s4);
+  padding: var(--s4);
+}
+
+.group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  padding: 0;
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.notice {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.pick {
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.samples {
+  display: grid;
+  gap: var(--s3);
+}
+
+.sample {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  inline-size: 100%;
+  padding: var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  text-align: start;
+}
+
+.sample:hover {
+  border-color: var(--green);
+}
+
+.sampleThumb {
+  flex: none;
+  inline-size: 60px;
+  block-size: 80px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  object-position: top;
+}
+
+.sampleText {
+  display: grid;
+  gap: var(--s1);
+  justify-items: start;
+}
+
+.sampleTitle {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.past {
+  display: grid;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  padding-inline: var(--s4);
+}
+
+.past > li + li {
+  border-block-start: 1px solid var(--rule);
+}
+
+.pastRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-block-size: 64px;
+  padding-block: var(--s3);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.pastText {
+  display: grid;
+  flex: 1;
+  gap: var(--s1);
+  justify-items: start;
+  min-inline-size: 0;
+}
+
+.pastTitle {
+  font-weight: var(--w-strong);
+  line-height: var(--lh-title);
+}
+
+.chevron {
+  flex: none;
+  color: var(--ink-soft);
+}
+
+.trip > p {
+  min-inline-size: 0;
+}
+
+.trip > a,
+.trip > button {
+  flex: none;
+  white-space: nowrap;
+}

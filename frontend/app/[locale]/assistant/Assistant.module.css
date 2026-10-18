@@ -1,0 +1,65 @@
+/* In danger, the way out comes before any typing. */
+.danger {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  margin: 0;
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.danger svg {
+  flex: none;
+}
+
+.problem {
+  margin: 0;
+  color: var(--red);
+  font-weight: var(--w-strong);
+}
+
+.listening {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  margin: 0;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--green-tint);
+  font-weight: var(--w-strong);
+}
+
+.wave {
+  flex: none;
+  color: var(--green);
+  animation: breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave {
+    animation: none;
+  }
+}
+
+.form {
+  display: grid;
+  gap: var(--s3);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}

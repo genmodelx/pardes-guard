@@ -1,0 +1,78 @@
+.list {
+  display: grid;
+  gap: var(--s3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A date reads like a ticket stub: the day first and large, then what it is for. */
+.item {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-inline-start: 6px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--sheet);
+}
+
+.item[data-source="case"] {
+  border-inline-start-color: var(--amber);
+}
+
+.item[data-source="mine"] {
+  border-inline-start-color: var(--rule-strong);
+}
+
+.item p {
+  margin: 0;
+}
+
+.when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  align-items: center;
+}
+
+.day {
+  font-size: var(--fs-h2);
+  font-weight: var(--w-title);
+  line-height: var(--lh-title);
+}
+
+.what {
+  font-weight: var(--w-strong);
+}
+
+.from {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.empty {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.form {
+  display: grid;
+  gap: var(--s4);
+  justify-items: start;
+}
+
+.form > * {
+  inline-size: 100%;
+}
+
+.form > button {
+  inline-size: auto;
+}
